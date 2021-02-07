@@ -12,21 +12,17 @@ use Illuminate\Support\Facades\Route;
 class PropertyController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
         return Inertia::render('Property/Index', [
-            'properties' => auth()->user()->properties
+            'properties' => $request->user()->currentTeam->properties
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+
+    public function create(Request $request)
     {
-        //
+        return Inertia::render('Property/Create');
     }
 
     /**
@@ -37,29 +33,43 @@ class PropertyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $property = new Property;
+
+        $property->street1 = '123 Main St';
+//        $property->street1 = $request->street1;
+//        $property->description = $request->description;
+//        $property->price = $request->price;
+//        $property->bed = $request->bed;
+//        $property->bath = $request->bath;
+//        $property->sqft = $request->sqft;
+//        $property->floor_plan_pdf_url = $request->floor_plan_pdf_url;
+//        $property->protected_password = $request->protected_password;
+//        $property->street1 = $request->street1;
+//        $property->street2 = $request->street2;
+//        $property->city = $request->city;
+//        $property->state = $request->state;
+//        $property->zip = $request->zip;
+//        $property->country = $request->country;
+
+        $property->save();
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param \App\Models\Property\Property $property
-     * @return \Illuminate\Http\Response
-     */
+
     public function show(Property $property)
     {
-        //
+        return Inertia::render('Property/Show', [
+            'property' => $property,
+            'photos' => $property->photosUrls(),
+            'primary_photo' => $property->primaryPhotoUrl,
+        ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param \App\Models\Property\Property $property
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit(Property $property)
     {
-        //
+        return Inertia::render('Property/Edit', [
+            'property' => $property
+        ]);
     }
 
     /**

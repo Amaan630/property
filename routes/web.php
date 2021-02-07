@@ -29,4 +29,4 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 
-Route::get('/property', 'App\Http\Controllers\Property\PropertyController@index');
+Route::resource('property', 'App\Http\Controllers\Property\PropertyController');
