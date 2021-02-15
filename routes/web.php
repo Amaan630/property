@@ -30,5 +30,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 
 Route::resource('property', 'App\Http\Controllers\Property\PropertyController');
+Route::resource('site', 'App\Http\Controllers\SiteController');
 
 Route::post('/waitlist', 'App\Http\Controllers\WaitlistController@store');
+Route::post('/site/create/new', 'App\Http\Controllers\SiteController@store');

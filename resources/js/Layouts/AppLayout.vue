@@ -17,8 +17,9 @@
 
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                                <jet-nav-link :href="route('property.index')" :active="route().current('dashboard')">
-                                    Properties
+                                <jet-nav-link :href="route('site.index')"
+                                              :active="route().current('site.index')">
+                                    Sites
                                 </jet-nav-link>
                             </div>
                         </div>

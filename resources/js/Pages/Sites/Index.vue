@@ -10,7 +10,7 @@
             <div class="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
                 <div class="space-y-12">
                     <ul class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
-                        <inertia-link :href="route('property.create')">
+                        <inertia-link :href="route('site.create')">
                             <div class="space-y-4">
                                 <div
                                     class="aspect-w-3 aspect-h-2 border-2 border-gray-300 rounded-lg justify-center items-center border-dashed	">
@@ -34,8 +34,8 @@
                                 </div>
                             </div>
                         </inertia-link>
-                        <li v-for="property in $page['props']['properties']" class="group">
-                            <inertia-link :href="route('property.edit', property.uuid)">
+                        <li v-for="site in $page['props']['sites']" class="group">
+                            <inertia-link :href="route('site.edit', site.uuid)">
                                 <div class="space-y-4">
                                     <div class="aspect-w-3 aspect-h-2">
                                         <img class="object-cover shadow-lg rounded-lg"
@@ -45,8 +45,9 @@
 
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3>{{ property.street1 }}</h3>
-                                            <p class="text-indigo-600">{{ property.city + ", " + property.state }}</p>
+                                            <h3>{{ site.title }}</h3>
+                                            <p class="text-indigo-600">
+                                                {{ site.type == "home" ? "Linktree Homepage" : "Property Site" }}</p>
                                         </div>
                                         <!--                                        <ul class="flex space-x-5">-->
                                         <!--                                            <li>-->

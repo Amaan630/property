@@ -47,6 +47,12 @@ class Team extends JetstreamTeam
     }
 
 
+    public function sites()
+    {
+        return $this->hasMany(Site::class);
+    }
+
+
     /**
      * The attributes that should be cast to native types.
      *
