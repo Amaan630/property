@@ -2,16 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreSiteRequest;
+use App\Http\Requests\StoreTopicRequest;
 use App\Models\Property\Property;
-use App\Models\Site;
-use App\Models\Topic;
+use App\Models\Question;
 use App\Models\Waitlist;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
-use Illuminate\Database\Eloquent\Model as Eloquent;
 
-class SiteController extends Controller
+class QuestionController extends Controller
 {
     public function index(Request $request)
     {
@@ -33,28 +31,14 @@ class SiteController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreSiteRequest $request)
+    public function store(StoreTopicRequest $request)
     {
-//        Site::create([
-//            'type' => $request->get('type'),
-//            'type' => $request->get('title')
-//        ]);
-
-//
-        Site::create([
-//            'email' => $request->get('email')
-            'team_id' => 1,
-            'type' => $request->get('type'),
-            'title' => $request->get('title')
+        Question::create([
+            'topic_id' => $request->get('topic_id'),
+            'text' => $request->get('question'),
         ]);
 
-//        Topic::create([
-//            'site_id' => 1,
-//            'text' => $request->get('topic'),
-//        ]);
-
-
-        return Inertia::render('Index');
+        return Inertia::render('Edit');
     }
 
 
@@ -62,10 +46,8 @@ class SiteController extends Controller
     {
         return Inertia::render('Sites/Show', [
             'site' => $site,
-            'topics' => $site->topics,
-            'questions' => $site->topics->each(function ($topic) {
-                return $topic->questions;
-            })
+//            'photos' => $property->photosUrls(),
+//            'primary_photo' => $property->primaryPhotoUrl,
         ]);
     }
 
@@ -73,11 +55,7 @@ class SiteController extends Controller
     public function edit(Site $site)
     {
         return Inertia::render('Sites/Edit', [
-            'site' => $site,
-            'topics' => $site->topics,
-            'questions' => $site->topics->each(function ($topic) {
-                return $topic->questions;
-            }),
+            'site' => $site
         ]);
     }
 

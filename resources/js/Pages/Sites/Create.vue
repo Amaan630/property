@@ -172,17 +172,17 @@
                         </template>
 
                         <template #form @submit.prevent="form.post('/site')">
+                            <!--                            <div class="col-span-6 sm:col-span-4">-->
+
+                            <!--Type-->
+                            <!--                                <jet-label for="type" value="Type"/>-->
+                            <!--                                <jet-input id="type" type="text" v-model="form.type" class="mt-1 block w-full"/>-->
+                            <!--                            </div>-->
+
+
                             <div class="col-span-6 sm:col-span-4">
 
-                                <!--Street Address-->
-                                <jet-label for="type" value="Type"/>
-                                <jet-input id="type" type="text" v-model="form.type" class="mt-1 block w-full"/>
-                            </div>
-
-
-                            <div class="col-span-6 sm:col-span-4">
-
-                                <!--Street Address 2-->
+                                <!--Site Name-->
                                 <jet-label for="name" value="Name"/>
                                 <jet-input id="name" type="text" v-model="form.title" class="mt-1 block w-full"/>
                             </div>
@@ -229,6 +229,41 @@
 
                     <section-border/>
                 </div>
+
+                <button type="button" onClick="addItem()"
+                        class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 justify-self-end">
+                    Add a Form
+                </button>
+
+                <script type="application/javascript">
+
+                    // Define the addItem() function
+                    // to be called through onclick
+                    function addItem() {
+
+                        // Get type of element from form
+                        // let type = document.getElementById("form-section").value;
+
+                        // Get the text/value for the tag
+                        // from the form
+                        let value = document.getElementById("value").value;
+
+                        // createElement() is used for
+                        // creating a new element
+                        // type
+                        //     = document.createElement(type);
+
+                        // Use value as textnode in this example
+                        // type.appendChild(
+                        //     document.createTextNode(value));
+
+                        // Append as child to the parent
+                        // tag i.e. ol
+                        document.getElementById(
+                            "form-section").appendChild(type);
+                    }
+                </script>
+
             </div>
         </div>
         <!--        </form>-->
@@ -256,21 +291,14 @@ export default {
         SectionBorder
     },
 
-    // data() {
-    //     return {
-    //         form: this.$inertia.form({
-    //             email: ''
-    //         }),
-    //     }
-    // },
-
     // methods: {
     data() {
         return {
             form: this.$inertia.form({
                 title: '',
-                type: '',
+                type: 'property',
                 team_id: 0,
+                topic: 'Topic',
             }),
         }
     },

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Site extends Model
+class Question extends Model
 {
     use HasFactory;
 
@@ -16,27 +16,17 @@ class Site extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'title',
-        'type',
-        'team_id'
+        'text',
+        'topic_id'
     ];
 
-    /**
-     * @var mixed
-     */
+    public function topic()
+    {
+        return $this->belongsTo(Topic::class);
+    }
 
     public function getRouteKeyName()
     {
         return 'uuid';
-    }
-
-    public function team()
-    {
-        return $this->belongsTo(Team::class);
-    }
-
-    public function topics()
-    {
-        return $this->hasMany(Topic::class);
     }
 }

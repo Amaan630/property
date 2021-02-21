@@ -7,132 +7,94 @@
                     <h2 class="font-semibold text-xl text-gray-800 leading-tight sm:truncate">
                         {{ $page['props']['site']['title'] }}
                     </h2>
-                    <div class="mt-1 flex flex-col sm:flex-row sm:flex-wrap sm:mt-0 sm:space-x-6">
-                        <!--                        <div class="mt-2 flex items-center text-sm text-gray-500">-->
-                        <!--                            &lt;!&ndash; Heroicon name: solid/briefcase &ndash;&gt;-->
-                        <!--                            <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg"-->
-                        <!--                                 viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">-->
-                        <!--                                <path fill-rule="evenodd"-->
-                        <!--                                      d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"-->
-                        <!--                                      clip-rule="evenodd"/>-->
-                        <!--                                <path-->
-                        <!--                                    d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"/>-->
-                        <!--                            </svg>-->
-                        <!--                            Full-time-->
-                        <!--                        </div>-->
-                        <!--                        <div class="mt-2 flex items-center text-sm text-gray-500">-->
-                        <!--                            &lt;!&ndash; Heroicon name: solid/location-marker &ndash;&gt;-->
-                        <!--                            <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg"-->
-                        <!--                                 viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">-->
-                        <!--                                <path fill-rule="evenodd"-->
-                        <!--                                      d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"-->
-                        <!--                                      clip-rule="evenodd"/>-->
-                        <!--                            </svg>-->
-                        <!--                            Remote-->
-                        <!--                        </div>-->
-                        <div class="mt-2 flex items-center text-sm text-gray-500">
-                            <!-- Heroicon name: solid/currency-dollar -->
-                            <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg"
-                                 viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path
-                                    d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
-                                <path fill-rule="evenodd"
-                                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"
-                                      clip-rule="evenodd"/>
-                            </svg>
-                            <!--                            {{ $page['props']['property']['price'] | currency }}-->
-                            22
-                        </div>
-                        <div class="mt-2 flex items-center text-sm text-gray-500">
-                            <!-- Heroicon name: solid/calendar -->
-                            <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg"
-                                 viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fill-rule="evenodd"
-                                      d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                      clip-rule="evenodd"/>
-                            </svg>
-                            Closing on January 9, 2020
-                        </div>
-                    </div>
+
                 </div>
                 <div class="mt-5 flex lg:mt-0 lg:ml-4">
-                <span class="hidden sm:block">
-                   <button type="button"
-                           class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    <!-- Heroicon name: solid/pencil -->
-                    <svg class="-ml-1 mr-2 h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                         fill="currentColor" aria-hidden="true">
-                      <path
-                          d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
-                    </svg>
-                    Edit
-                  </button>
-                </span>
 
                     <span class="hidden sm:block ml-3">
 <!--                                      :href="route('site.show', $page['props']['property']['uuid'])"-->
+                        <button type="button"
+                                class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+
+                    <!-- Heroicon name: solid/link -->
+                            <svg class="-ml-1 mr-2 h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 20 20"
+                                 fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                      d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z"
+                                      clip-rule="evenodd"/>
+                            </svg>
+                            Copy Link
+                        </button>
+                    </span>
+
+                    <span class="sm:ml-3">
+                        <inertia-link
+                            :href="route('site.show', site.uuid)"
+                            as="button" type="button"
+                            class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                <!-- Heroicon name: solid/check -->
+                            <svg class="-ml-1 mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                 fill="currentColor"
+                                 aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                      clip-rule="evenodd"/>
+                            </svg>
+                        View
+                        </inertia-link>
+                    </span>
+
+                    <!-- Dropdown -->
+                    <span class="ml-3 relative sm:hidden">
+<!--                        <button type="button"-->
+                        <!--                                class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"-->
+                        <!--                                id="mobile-menu" aria-haspopup="true">-->
+                        <!--                            More-->
+                        <!--                            &lt;!&ndash; Heroicon name: solid/chevron-down &ndash;&gt;-->
+                        <!--                            <svg class="-mr-1 ml-2 h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg"-->
+                        <!--                                 viewBox="0 0 20 20"-->
+                        <!--                                 fill="currentColor" aria-hidden="true">-->
+                        <!--                                <path fill-rule="evenodd"-->
+                        <!--                                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"-->
+                        <!--                                      clip-rule="evenodd"/>-->
+                        <!--                            </svg>-->
+                        <!--                        </button>-->
+
+                        <!--                        &lt;!&ndash;-->
+                        <!--                          Dropdown panel, show/hide based on dropdown state.-->
+
+                        <!--                          Entering: "transition ease-out duration-200"-->
+                        <!--                            From: "transform opacity-0 scale-95"-->
+                        <!--                            To: "transform opacity-100 scale-100"-->
+                        <!--                          Leaving: "transition ease-in duration-75"-->
+                        <!--                            From: "transform opacity-100 scale-100"-->
+                        <!--                            To: "transform opacity-0 scale-95"-->
+                        <!--                        &ndash;&gt;-->
+                        <!--                        <div-->
+                        <!--                            class="origin-top-right absolute right-0 mt-2 -mr-1 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5"-->
+                        <!--                            aria-labelledby="mobile-menu" role="menu">-->
+                        <!--                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Edit</a>-->
+                        <!--                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">View</a>-->
+                        <!--                        </div>-->
+
+                        <!--                                      :href="route('site.show', $page['props']['property']['uuid'])"-->
                         <inertia-link
                             :href="route('site.show', 'uuid1')"
                             as="button" type="button"
                             class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
 
-        <!-- Heroicon name: solid/link -->
-                <svg class="-ml-1 mr-2 h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                     fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd"
-                        d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z"
-                        clip-rule="evenodd"/>
-                </svg>
-                View
-              </inertia-link>
-            </span>
-
-                    <span class="sm:ml-3">
-      <button type="button"
-              class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-        <!-- Heroicon name: solid/check -->
-        <svg class="-ml-1 mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-             aria-hidden="true">
-          <path fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"/>
-        </svg>
-        Publish
-      </button>
-    </span>
-
-                    <!-- Dropdown -->
-                    <span class="ml-3 relative sm:hidden">
-      <button type="button"
-              class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              id="mobile-menu" aria-haspopup="true">
-        More
-          <!-- Heroicon name: solid/chevron-down -->
-        <svg class="-mr-1 ml-2 h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-             fill="currentColor" aria-hidden="true">
-          <path fill-rule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clip-rule="evenodd"/>
-        </svg>
-      </button>
-
-                        <!--
-                          Dropdown panel, show/hide based on dropdown state.
-
-                          Entering: "transition ease-out duration-200"
-                            From: "transform opacity-0 scale-95"
-                            To: "transform opacity-100 scale-100"
-                          Leaving: "transition ease-in duration-75"
-                            From: "transform opacity-100 scale-100"
-                            To: "transform opacity-0 scale-95"
-                        -->
-      <div
-          class="origin-top-right absolute right-0 mt-2 -mr-1 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5"
-          aria-labelledby="mobile-menu" role="menu">
-        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Edit</a>
-        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">View</a>
-      </div>
-    </span>
+                    <!-- Heroicon name: solid/link -->
+                            <svg class="-ml-1 mr-2 h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 20 20"
+                                 fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                      d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z"
+                                      clip-rule="evenodd"/>
+                            </svg>
+                            Copy Link
+                        </inertia-link>
+                    </span>
                 </div>
             </div>
         </template>
@@ -140,79 +102,293 @@
         <div>
             <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
                 <div>
-                    <form-section>
-                        <template #title>
-                            General Information
-                        </template>
+                    <!--CREATE FORM BUTTON-->
+                    <div class="bg-white shadow sm:rounded-lg">
+                        <div class="px-4 py-5 sm:p-6">
+                            <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                Add a form
+                            </h3>
+                            <div class="mt-2 max-w-xl text-sm text-gray-500">
+                                <p>
+                                    Forms are how customers will interact with your page and how you'll generate leads.
+                                </p>
+                            </div>
+                            <div class="mt-5">
+                                <div class="relative inline-block text-left">
+                                    <button type="button" @click="isOpen=!isOpen"
+                                            class="inline-flex items-center justify-center px-4 py-2 border border-transparent font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm">
+                                        New Form
+                                    </button>
 
-                        <template #description>
-                            Add the street address and description.
-                        </template>
+                                    <!--
+                                    Dropdown panel, show/hide based on dropdown state.
 
-                        <!--                        <template #form>-->
-                        <!--                            <div class="col-span-6 sm:col-span-4">-->
+                                    Entering: "transition ease-out duration-100"
+                                    From: "transform opacity-0 scale-95"
+                                    To: "transform opacity-100 scale-100"
+                                    Leaving: "transition ease-in duration-75"
+                                    From: "transform opacity-100 scale-100"
+                                    To: "transform opacity-0 scale-95"
 
-                        <!--                                &lt;!&ndash;Street Address&ndash;&gt;-->
-                        <!--                                <jet-label for="street1" value="Street Address"/>-->
-                        <!--                                <jet-input id="street1" type="text" class="mt-1 block w-full"-->
-                        <!--                                           :value="$page['props']['property']['street1']"-->
-                        <!--                                           autocomplete="name"/>-->
-                        <!--                            </div>-->
+                                    DROPDOWN COPIED TO MY NOTES
+                                    -->
 
-                        <!--                            <div class="col-span-6 sm:col-span-4">-->
-                        <!--                                &lt;!&ndash;City&ndash;&gt;-->
-                        <!--                                <jet-label for="city" value="City"/>-->
-                        <!--                                <jet-input id="city" type="text" class="mt-1 block w-full"-->
-                        <!--                                           :value="$page['props']['property']['city']"-->
-                        <!--                                           autocomplete="name"/>-->
-                        <!--                            </div>-->
+                                    <!--MODAL-->
+                                    <transition
+                                        enter-active-class="transition ease-out duration-300"
+                                        enter-from-class="opacity-0"
+                                        enter-to-class="opacity-100"
+                                        leave-active-class="transition ease-in duration-200"
+                                        leave-from-class="opacity-100"
+                                        leave-to-class="opacity-0">
+                                        <div class="fixed z-10 inset-0 overflow-y-auto " v-if="isOpen">
+                                            <div
+                                                class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                                                <!--
+                                                  Background overlay, show/hide based on modal state.
 
-                        <!--                            <div class="col-span-6 sm:col-span-4">-->
-                        <!--                                &lt;!&ndash;State&ndash;&gt;-->
-                        <!--                                <jet-label for="state" value="State"/>-->
-                        <!--                                <jet-input id="state" type="text" class="mt-1 block w-full"-->
-                        <!--                                           :value="$page['props']['property']['state']"-->
-                        <!--                                           autocomplete="name"/>-->
-                        <!--                            </div>-->
-                        <!--                            &lt;!&ndash;                                <jet-input-error :message="form.errors.name" class="mt-2" />&ndash;&gt;-->
-                        <!--                        </template>-->
+                                                  Entering: "ease-out duration-300"
+                                                    From: "opacity-0"
+                                                    To: "opacity-100"
+                                                  Leaving: "ease-in duration-200"
+                                                    From: "opacity-100"
+                                                    To: "opacity-0"
+                                                -->
+                                                <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+                                                    <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+                                                </div>
 
-                        <template #actions>
-                            <!--                            <jet-action-message :on="form.recentlySuccessful" class="mr-3">-->
-                            <!--                                Saved.-->
-                            <!--                            </jet-action-message>-->
+                                                <!-- This element is to trick the browser into centering the modal contents. -->
+                                                <span class="hidden sm:inline-block sm:align-middle sm:h-screen"
+                                                      aria-hidden="true">&#8203;</span>
+                                                <!--
+                                                  Modal panel, show/hide based on modal state.
 
-                            <jet-button class="'opacity-25'">
-                                Save
-                            </jet-button>
-                        </template>
+                                                  Entering: "ease-out duration-300"
+                                                    From: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                                                    To: "opacity-100 translate-y-0 sm:scale-100"
+                                                  Leaving: "ease-in duration-200"
+                                                    From: "opacity-100 translate-y-0 sm:scale-100"
+                                                    To: "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                                                -->
+                                                <div
+                                                    class="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6"
+                                                    role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+                                                    <div>
+                                                        <div
+                                                            class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-purple-100">
+                                                            <!-- Heroicon name: outline/check -->
+                                                            <svg class="h-6 w-6 text-purple-600"
+                                                                 xmlns="http://www.w3.org/2000/svg"
+                                                                 fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                                                 aria-hidden="true">
+                                                                <!--                                                    <path stroke-linecap="round" stroke-linejoin="round"-->
+                                                                <!--                                                          stroke-width="2"-->
+                                                                <!--                                                          d="M5 13l4 4L19 7"/>-->
+                                                                <!--                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">-->
+                                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                                      stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                                                                <!--                                                    </svg>-->
+                                                            </svg>
+                                                        </div>
+                                                        <div class="mt-3 text-center sm:mt-5">
+                                                            <h3 class="text-lg leading-6 font-medium text-gray-900"
+                                                                id="modal-headline">
+                                                                Create a New Form
+                                                            </h3>
+                                                            <div class="mt-2">
+                                                                <div class="col-span-6 sm:col-span-4">
+                                                                    <jet-label for="title" value="Title"/>
+                                                                    <jet-input id="name" type="text"
+                                                                               v-model="form.text"
+                                                                               class="mt-1 block w-full"/>
+                                                                </div>
 
-                    </form-section>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <form @submit.prevent="form.post('/site/form')">
+                                                        <div
+                                                            class="mt-5 sm:mt-6 sm:grid sm:grid-cols-2 sm:gap-3 sm:grid-flow-row-dense">
+
+                                                            <!--LOADING-->
+                                                            <template v-if="form.processing">
+                                                                <!--                                                    <span class="sm:ml-3">-->
+                                                                <button type="submit"
+                                                                        class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm">
+                                                                    <svg
+                                                                        class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                                                                        xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                                        viewBox="0 0 24 24">
+                                                                        <circle class="opacity-25" cx="12" cy="12"
+                                                                                r="10"
+                                                                                stroke="currentColor"
+                                                                                stroke-width="4"></circle>
+                                                                        <path class="opacity-75" fill="currentColor"
+                                                                              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                                                    </svg>
+                                                                    Create
+                                                                </button>
+                                                                <!--                                                    </span>-->
+                                                            </template>
+
+                                                            <!--COMPLETED-->
+                                                            <template v-else-if="form.recentlySuccessful">
+                                                                <!--                                                    <span class="sm:ml-3">-->
+                                                                <button type="submit"
+                                                                        class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm">
+                                                                    <!-- Heroicon name: solid/check -->
+                                                                    <svg class="-ml-1 mr-2 h-5 w-5"
+                                                                         xmlns="http://www.w3.org/2000/svg"
+                                                                         viewBox="0 0 20 20"
+                                                                         fill="currentColor"
+                                                                         aria-hidden="true">
+                                                                        <path fill-rule="evenodd"
+                                                                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                                              clip-rule="evenodd"/>
+                                                                    </svg>
+                                                                    Created
+                                                                </button>
+                                                                <!--                                                    </span>-->
+                                                            </template>
+
+                                                            <!--REGULAR CREATE-->
+                                                            <template v-else>
+                                                                <!--                                                    <span class="sm:ml-3">-->
+                                                                <button type="submit"
+                                                                        class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm">
+                                                                    Create
+                                                                </button>
+                                                                <!--                                                    </span>-->
+                                                            </template>
+
+
+                                                            <button type="button" @click="isOpen=!isOpen"
+                                                                    class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:col-start-1 sm:text-sm">
+                                                                Cancel
+                                                            </button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </transition>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
 
                     <section-border/>
-                </div>
 
-                <div>
-                    <form-section>
-                        <template #title>
-                            Cover Photo
-                        </template>
+                    <ul class="space-y-12 sm:grid sm:grid-cols-1 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-1 lg:gap-x-8">
+                        <li v-for="topic in $page['props']['topics']" class="group">
+                            <!-- This example requires Tailwind CSS v2.0+ -->
+                            <div class="bg-gray-50 sm:rounded-lg">
+                                <div class="px-4 py-5 sm:p-6">
+                                    <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                        {{ topic.text }}
+                                    </h3>
 
-                        <template #description>
-                            This photo will be displayed large, so make sure you choose a high-resolution photo.
-                        </template>
+                                    <ul v-if="$page['props']['questions'][0]['questions'].length">
+                                        <li v-for="(question, index) in $page['props']['questions'][0]['questions']"
+                                            class="group">
+                                            <div class="mt-2 max-w-xl text-sm text-gray-500">
+                                                <p>
+                                                    {{
+                                                        question == null ? "No questions" : (index + 1) + ". " +
+                                                            question['text']
+                                                    }}
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div v-else class="mt-2 max-w-xl text-sm text-gray-500">
+                                        <p>
+                                            No questions
+                                        </p>
+                                    </div>
 
-                        <template #form>
-                            form
-                        </template>
+                                    <div class="mt-5">
 
-                        <template #actions>
-                            actions
-                        </template>
+                                        <div class="mb-5" v-if="addQuestion">
+                                            <label for="question" class="block text-sm font-medium text-gray-700">Question</label>
+                                            <div class="mt-1">
+                                                <input type="text" name="question" id="question" v-model="form.question"
+                                                       class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                                                       placeholder="How Many Bedrooms?">
+                                            </div>
+                                        </div>
 
-                    </form-section>
+                                        <button v-if="!addQuestion" type="button" @click="addQuestion=!addQuestion"
+                                                class="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm">
+                                            Add Question
+                                        </button>
 
-                    <section-border/>
+                                        <div v-if="addQuestion" class="flex-row	">
+
+                                            <form @submit.prevent="form.post('/site/form/question')">
+
+                                                <!--LOADING-->
+                                                <template v-if="form.processing">
+                                                    <button type="button"
+                                                            class="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm">
+                                                        <svg
+                                                            class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                                                            xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                            viewBox="0 0 24 24">
+                                                            <circle class="opacity-25" cx="12" cy="12"
+                                                                    r="10"
+                                                                    stroke="currentColor"
+                                                                    stroke-width="4"></circle>
+                                                            <path class="opacity-75" fill="currentColor"
+                                                                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                                        </svg>
+
+                                                        Adding Question...
+                                                    </button>
+                                                </template>
+
+                                                <!--RECENTLY COMPLETED-->
+                                                <template v-if="form.recentlySuccessful">
+                                                    <button type="button"
+                                                            class="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm">
+                                                        <svg class="-ml-1 mr-2 h-5 w-5"
+                                                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                                             fill="currentColor"
+                                                             aria-hidden="true">
+                                                            <path fill-rule="evenodd"
+                                                                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                                  clip-rule="evenodd"/>
+                                                        </svg>
+
+                                                        Added Question
+                                                    </button>
+                                                </template>
+
+                                                <!--REGULAR-->
+                                                <template v-else>
+                                                    <button type="submit"
+                                                            class="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm">
+                                                        Add Question
+                                                    </button>
+                                                </template>
+                                            </form>
+
+                                            <button type="button" @click="addQuestion=!addQuestion"
+                                                    class="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm">
+                                                Cancel
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -229,11 +405,13 @@ import JetLabel from '@/Jetstream/Label';
 import JetInput from '@/Jetstream/Input';
 import JetButton from '@/Jetstream/Button';
 import JetActionMessage from '@/Jetstream/ActionMessage'
+import Button from "@/Jetstream/Button";
 
 export default {
-    name: "Show",
+    name: "Edit",
     // components: {}
     components: {
+        Button,
         SectionBorder,
         FormSection,
         AppLayout,
@@ -242,6 +420,22 @@ export default {
         JetButton,
         JetActionMessage,
     },
+
+    props: ['site'],
+
+    data: function () {
+        return {
+            isOpen: false,
+            addQuestion: false,
+
+            form: this.$inertia.form({
+                text: '',
+                question: '',
+                topic_id: 1,
+                site_id: this.site.id,
+            }),
+        }
+    }
 }
 </script>
 
