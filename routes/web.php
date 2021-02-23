@@ -31,6 +31,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::resource('property', 'App\Http\Controllers\Property\PropertyController');
 Route::resource('site', 'App\Http\Controllers\SiteController');
+Route::get('site/{site}/form/{form}', 'App\Http\Controllers\TopicController@show')->name('site.form.show');
+//Route::post('site.form', 'App\Http\Controllers\TopicController@store')->name('site.form.store');
+
 //Route::resource('topic', 'App\Http\Controllers\TopicController');
 
 Route::post('/waitlist', 'App\Http\Controllers\WaitlistController@store');

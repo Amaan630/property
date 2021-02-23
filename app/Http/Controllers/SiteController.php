@@ -16,7 +16,8 @@ class SiteController extends Controller
     public function index(Request $request)
     {
         return Inertia::render('Sites/Index', [
-            'sites' => $request->user()->currentTeam->sites
+            'sites' => $request->user()->currentTeam->sites,
+            'name' => $request->user()->name,
 //            'properties' => $request->user()->currentTeam->properties
         ]);
     }
@@ -31,34 +32,37 @@ class SiteController extends Controller
      * Store a newly created resource in storage.
      *
      * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
+     * @return \Inertia\Response
      */
     public function store(StoreSiteRequest $request)
     {
-//        Site::create([
-//            'type' => $request->get('type'),
-//            'type' => $request->get('title')
-//        ]);
 
-//
-        Site::create([
+        $site = Site::create([
 //            'email' => $request->get('email')
             'team_id' => 1,
             'type' => $request->get('type'),
             'title' => $request->get('title')
         ]);
 
-//        Topic::create([
-//            'site_id' => 1,
-//            'text' => $request->get('topic'),
-//        ]);
 
-
-        return Inertia::render('Index');
+        return Inertia::render('Sites/Edit', [
+            'site' => $site
+        ]);
     }
 
 
     public function show(Site $site)
+    {
+        return Inertia::render('Sites/Show', [
+            'site' => $site,
+            'topics' => $site->topics,
+            'questions' => $site->topics->each(function ($topic) {
+                return $topic->questions;
+            })
+        ]);
+    }
+
+    public function form(Site $site)
     {
         return Inertia::render('Sites/Show', [
             'site' => $site,

@@ -79,7 +79,10 @@
                     <ul v-if="$page['props']['topics'].length">
                         <li v-for="(topic) in $page['props']['topics']"
                             class="group">
-                            <inertia-link :href="route('site.index', topic)">
+                            <inertia-link :href="route('site.form.show', {
+                                site:  site.uuid,
+                                form: topic.uuid
+                            })">
                                 <div class="mb-5 bg-white shadow sm:rounded-lg sm:mb-4">
                                     <div class="px-4 py-5 sm:p-6">
                                         <div class="sm:flex sm:items-start sm:justify-between">
@@ -124,6 +127,7 @@
 import AppLayout from "@/Layouts/AppLayout";
 
 export default {
+    props: ['site'],
     name: "Show",
     components: {AppLayout}
 }

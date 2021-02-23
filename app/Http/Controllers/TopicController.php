@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreTopicRequest;
 use App\Models\Property\Property;
 use App\Models\Question;
+use App\Models\Site;
 use App\Models\Topic;
 use App\Models\Waitlist;
 use Illuminate\Http\Request;
@@ -12,9 +13,22 @@ use Inertia\Inertia;
 
 class TopicController extends Controller
 {
+
+
+//    public function show(Request $request, Site $site, Topic $topic)
+//    {
+//
+//    }
+
+//    public function store(Request $request, Site $site, Topic $topic)
+//    {
+//
+//    }
+
+
     public function index(Request $request)
     {
-        return Inertia::render('Sites/Index', [
+        return Inertia::render('Sites/Form', [
             'sites' => $request->user()->currentTeam->sites
 //            'properties' => $request->user()->currentTeam->properties
         ]);
@@ -49,12 +63,12 @@ class TopicController extends Controller
     }
 
 
-    public function show(Site $site)
+    public function show(Request $request, Site $site, Topic $form)
     {
-        return Inertia::render('Sites/Show', [
-            'site' => $site,
-//            'photos' => $property->photosUrls(),
-//            'primary_photo' => $property->primaryPhotoUrl,
+        return Inertia::render('Sites/Form', [
+            'topic' => $form,
+            'title' => $form->text,
+            'questions' => $form->questions,
         ]);
     }
 

@@ -25,6 +25,7 @@ class Topic extends Model
         return 'uuid';
     }
 
+
     public function site()
     {
         return $this->belongsTo(Site::class);

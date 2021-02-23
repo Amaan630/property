@@ -7503,6 +7503,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -7623,67 +7636,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Form.vue"
 });
@@ -7704,6 +7656,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
 /* harmony import */ var _Jetstream_Label__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/Jetstream/Label */ "./resources/js/Jetstream/Label.vue");
 /* harmony import */ var _Jetstream_Input__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/Jetstream/Input */ "./resources/js/Jetstream/Input.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -8107,8 +8070,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['site'],
   name: "Show",
   components: {
     AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__.default
@@ -40495,350 +40462,402 @@ var render = function() {
                             }
                           },
                           [
-                            _vm.isOpen
-                              ? _c(
+                            _c(
+                              "div",
+                              {
+                                directives: [
+                                  {
+                                    name: "show",
+                                    rawName: "v-show",
+                                    value: _vm.isOpen,
+                                    expression: "isOpen"
+                                  }
+                                ],
+                                staticClass:
+                                  "fixed z-10 inset-0 overflow-y-auto "
+                              },
+                              [
+                                _c(
                                   "div",
                                   {
                                     staticClass:
-                                      "fixed z-10 inset-0 overflow-y-auto "
+                                      "flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
                                   },
                                   [
                                     _c(
                                       "div",
                                       {
                                         staticClass:
-                                          "flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
+                                          "fixed inset-0 transition-opacity",
+                                        attrs: { "aria-hidden": "true" }
                                       },
                                       [
-                                        _c(
-                                          "div",
-                                          {
-                                            staticClass:
-                                              "fixed inset-0 transition-opacity",
-                                            attrs: { "aria-hidden": "true" }
-                                          },
-                                          [
-                                            _c("div", {
-                                              staticClass:
-                                                "absolute inset-0 bg-gray-500 opacity-75"
-                                            })
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "span",
-                                          {
-                                            staticClass:
-                                              "hidden sm:inline-block sm:align-middle sm:h-screen",
-                                            attrs: { "aria-hidden": "true" }
-                                          },
-                                          [_vm._v("​")]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          {
-                                            staticClass:
-                                              "inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6",
-                                            attrs: {
-                                              role: "dialog",
-                                              "aria-modal": "true",
-                                              "aria-labelledby":
-                                                "modal-headline"
-                                            }
-                                          },
-                                          [
-                                            _c("div", [
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-purple-100"
-                                                },
-                                                [
+                                        _c("div", {
+                                          staticClass:
+                                            "absolute inset-0 bg-gray-500 opacity-75"
+                                        })
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "span",
+                                      {
+                                        staticClass:
+                                          "hidden sm:inline-block sm:align-middle sm:h-screen",
+                                        attrs: { "aria-hidden": "true" }
+                                      },
+                                      [_vm._v("​")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "transition",
+                                      {
+                                        attrs: {
+                                          "enter-active-class":
+                                            "transition ease-out duration-300",
+                                          "enter-from-class":
+                                            "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95",
+                                          "enter-to-class":
+                                            "opacity-100 translate-y-0 sm:scale-100",
+                                          "leave-active-class":
+                                            "transition ease-in duration-200",
+                                          "leave-from-class":
+                                            "opacity-100 translate-y-0 sm:scale-100",
+                                          "leave-to-class":
+                                            "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                                        }
+                                      },
+                                      [
+                                        _vm.isOpen
+                                          ? _c(
+                                              "div",
+                                              {
+                                                staticClass:
+                                                  "inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6",
+                                                attrs: {
+                                                  role: "dialog",
+                                                  "aria-modal": "true",
+                                                  "aria-labelledby":
+                                                    "modal-headline"
+                                                }
+                                              },
+                                              [
+                                                _c("div", [
                                                   _c(
-                                                    "svg",
+                                                    "div",
                                                     {
                                                       staticClass:
-                                                        "h-6 w-6 text-purple-600",
-                                                      attrs: {
-                                                        xmlns:
-                                                          "http://www.w3.org/2000/svg",
-                                                        fill: "none",
-                                                        viewBox: "0 0 24 24",
-                                                        stroke: "currentColor",
-                                                        "aria-hidden": "true"
-                                                      }
+                                                        "mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-purple-100"
                                                     },
                                                     [
-                                                      _c("path", {
-                                                        attrs: {
-                                                          "stroke-linecap":
-                                                            "round",
-                                                          "stroke-linejoin":
-                                                            "round",
-                                                          "stroke-width": "2",
-                                                          d:
-                                                            "M12 6v6m0 0v6m0-6h6m-6 0H6"
-                                                        }
-                                                      })
-                                                    ]
-                                                  )
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "mt-3 text-center sm:mt-5"
-                                                },
-                                                [
-                                                  _c(
-                                                    "h3",
-                                                    {
-                                                      staticClass:
-                                                        "text-lg leading-6 font-medium text-gray-900",
-                                                      attrs: {
-                                                        id: "modal-headline"
-                                                      }
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        "\n                                                                Create a New Form\n                                                            "
+                                                      _c(
+                                                        "svg",
+                                                        {
+                                                          staticClass:
+                                                            "h-6 w-6 text-purple-600",
+                                                          attrs: {
+                                                            xmlns:
+                                                              "http://www.w3.org/2000/svg",
+                                                            fill: "none",
+                                                            viewBox:
+                                                              "0 0 24 24",
+                                                            stroke:
+                                                              "currentColor",
+                                                            "aria-hidden":
+                                                              "true"
+                                                          }
+                                                        },
+                                                        [
+                                                          _c("path", {
+                                                            attrs: {
+                                                              "stroke-linecap":
+                                                                "round",
+                                                              "stroke-linejoin":
+                                                                "round",
+                                                              "stroke-width":
+                                                                "2",
+                                                              d:
+                                                                "M12 6v6m0 0v6m0-6h6m-6 0H6"
+                                                            }
+                                                          })
+                                                        ]
                                                       )
                                                     ]
                                                   ),
                                                   _vm._v(" "),
                                                   _c(
                                                     "div",
-                                                    { staticClass: "mt-2" },
+                                                    {
+                                                      staticClass:
+                                                        "mt-3 text-center sm:mt-5"
+                                                    },
                                                     [
                                                       _c(
-                                                        "div",
+                                                        "h3",
                                                         {
                                                           staticClass:
-                                                            "col-span-6 sm:col-span-4"
+                                                            "text-lg leading-6 font-medium text-gray-900",
+                                                          attrs: {
+                                                            id: "modal-headline"
+                                                          }
                                                         },
                                                         [
-                                                          _c("jet-label", {
-                                                            attrs: {
-                                                              for: "title",
-                                                              value: "Title"
-                                                            }
-                                                          }),
-                                                          _vm._v(" "),
-                                                          _c("jet-input", {
-                                                            staticClass:
-                                                              "mt-1 block w-full",
-                                                            attrs: {
-                                                              id: "name",
-                                                              type: "text"
+                                                          _vm._v(
+                                                            "\n                                                                    Create a New Form\n                                                                "
+                                                          )
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "div",
+                                                        { staticClass: "mt-2" },
+                                                        [
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "col-span-6 sm:col-span-4"
                                                             },
-                                                            model: {
-                                                              value:
-                                                                _vm.form.text,
-                                                              callback: function(
-                                                                $$v
-                                                              ) {
-                                                                _vm.$set(
-                                                                  _vm.form,
-                                                                  "text",
-                                                                  $$v
-                                                                )
-                                                              },
-                                                              expression:
-                                                                "form.text"
-                                                            }
-                                                          })
-                                                        ],
-                                                        1
+                                                            [
+                                                              _c("jet-label", {
+                                                                attrs: {
+                                                                  for: "title",
+                                                                  value: "Title"
+                                                                }
+                                                              }),
+                                                              _vm._v(" "),
+                                                              _c("jet-input", {
+                                                                staticClass:
+                                                                  "mt-1 block w-full",
+                                                                attrs: {
+                                                                  id: "name",
+                                                                  type: "text"
+                                                                },
+                                                                model: {
+                                                                  value:
+                                                                    _vm.form
+                                                                      .text,
+                                                                  callback: function(
+                                                                    $$v
+                                                                  ) {
+                                                                    _vm.$set(
+                                                                      _vm.form,
+                                                                      "text",
+                                                                      $$v
+                                                                    )
+                                                                  },
+                                                                  expression:
+                                                                    "form.text"
+                                                                }
+                                                              })
+                                                            ],
+                                                            1
+                                                          )
+                                                        ]
                                                       )
                                                     ]
                                                   )
-                                                ]
-                                              )
-                                            ]),
-                                            _vm._v(" "),
-                                            _c(
-                                              "form",
-                                              {
-                                                on: {
-                                                  submit: function($event) {
-                                                    $event.preventDefault()
-                                                    return _vm.form.post(
-                                                      "/site/form"
-                                                    )
-                                                  }
-                                                }
-                                              },
-                                              [
+                                                ]),
+                                                _vm._v(" "),
                                                 _c(
-                                                  "div",
+                                                  "form",
                                                   {
-                                                    staticClass:
-                                                      "mt-5 sm:mt-6 sm:grid sm:grid-cols-2 sm:gap-3 sm:grid-flow-row-dense"
+                                                    on: {
+                                                      submit: function($event) {
+                                                        $event.preventDefault()
+                                                        return _vm.form.post(
+                                                          "/site/form"
+                                                        )
+                                                      }
+                                                    }
                                                   },
                                                   [
-                                                    _vm.form.processing
-                                                      ? [
-                                                          _c(
-                                                            "button",
-                                                            {
-                                                              staticClass:
-                                                                "w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm",
-                                                              attrs: {
-                                                                type: "submit"
-                                                              }
-                                                            },
-                                                            [
-                                                              _c(
-                                                                "svg",
-                                                                {
-                                                                  staticClass:
-                                                                    "animate-spin -ml-1 mr-3 h-5 w-5 text-white",
-                                                                  attrs: {
-                                                                    xmlns:
-                                                                      "http://www.w3.org/2000/svg",
-                                                                    fill:
-                                                                      "none",
-                                                                    viewBox:
-                                                                      "0 0 24 24"
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _c("circle", {
-                                                                    staticClass:
-                                                                      "opacity-25",
-                                                                    attrs: {
-                                                                      cx: "12",
-                                                                      cy: "12",
-                                                                      r: "10",
-                                                                      stroke:
-                                                                        "currentColor",
-                                                                      "stroke-width":
-                                                                        "4"
-                                                                    }
-                                                                  }),
-                                                                  _vm._v(" "),
-                                                                  _c("path", {
-                                                                    staticClass:
-                                                                      "opacity-75",
-                                                                    attrs: {
-                                                                      fill:
-                                                                        "currentColor",
-                                                                      d:
-                                                                        "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                                                                    }
-                                                                  })
-                                                                ]
-                                                              ),
-                                                              _vm._v(
-                                                                "\n                                                                    Create\n                                                                "
-                                                              )
-                                                            ]
-                                                          )
-                                                        ]
-                                                      : _vm.form
-                                                          .recentlySuccessful
-                                                      ? [
-                                                          _c(
-                                                            "button",
-                                                            {
-                                                              staticClass:
-                                                                "w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm",
-                                                              attrs: {
-                                                                type: "submit"
-                                                              }
-                                                            },
-                                                            [
-                                                              _c(
-                                                                "svg",
-                                                                {
-                                                                  staticClass:
-                                                                    "-ml-1 mr-2 h-5 w-5",
-                                                                  attrs: {
-                                                                    xmlns:
-                                                                      "http://www.w3.org/2000/svg",
-                                                                    viewBox:
-                                                                      "0 0 20 20",
-                                                                    fill:
-                                                                      "currentColor",
-                                                                    "aria-hidden":
-                                                                      "true"
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _c("path", {
-                                                                    attrs: {
-                                                                      "fill-rule":
-                                                                        "evenodd",
-                                                                      d:
-                                                                        "M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z",
-                                                                      "clip-rule":
-                                                                        "evenodd"
-                                                                    }
-                                                                  })
-                                                                ]
-                                                              ),
-                                                              _vm._v(
-                                                                "\n                                                                    Created\n                                                                "
-                                                              )
-                                                            ]
-                                                          )
-                                                        ]
-                                                      : [
-                                                          _c(
-                                                            "button",
-                                                            {
-                                                              staticClass:
-                                                                "w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm",
-                                                              attrs: {
-                                                                type: "submit"
-                                                              }
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "\n                                                                    Create\n                                                                "
-                                                              )
-                                                            ]
-                                                          )
-                                                        ],
-                                                    _vm._v(" "),
                                                     _c(
-                                                      "button",
+                                                      "div",
                                                       {
                                                         staticClass:
-                                                          "mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:col-start-1 sm:text-sm",
-                                                        attrs: {
-                                                          type: "button"
-                                                        },
-                                                        on: {
-                                                          click: function(
-                                                            $event
-                                                          ) {
-                                                            _vm.isOpen = !_vm.isOpen
-                                                          }
-                                                        }
+                                                          "mt-5 sm:mt-6 sm:grid sm:grid-cols-2 sm:gap-3 sm:grid-flow-row-dense"
                                                       },
                                                       [
-                                                        _vm._v(
-                                                          "\n                                                                Cancel\n                                                            "
+                                                        _vm.form.processing
+                                                          ? [
+                                                              _c(
+                                                                "button",
+                                                                {
+                                                                  staticClass:
+                                                                    "w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm",
+                                                                  attrs: {
+                                                                    type:
+                                                                      "submit"
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _c(
+                                                                    "svg",
+                                                                    {
+                                                                      staticClass:
+                                                                        "animate-spin -ml-1 mr-3 h-5 w-5 text-white",
+                                                                      attrs: {
+                                                                        xmlns:
+                                                                          "http://www.w3.org/2000/svg",
+                                                                        fill:
+                                                                          "none",
+                                                                        viewBox:
+                                                                          "0 0 24 24"
+                                                                      }
+                                                                    },
+                                                                    [
+                                                                      _c(
+                                                                        "circle",
+                                                                        {
+                                                                          staticClass:
+                                                                            "opacity-25",
+                                                                          attrs: {
+                                                                            cx:
+                                                                              "12",
+                                                                            cy:
+                                                                              "12",
+                                                                            r:
+                                                                              "10",
+                                                                            stroke:
+                                                                              "currentColor",
+                                                                            "stroke-width":
+                                                                              "4"
+                                                                          }
+                                                                        }
+                                                                      ),
+                                                                      _vm._v(
+                                                                        " "
+                                                                      ),
+                                                                      _c(
+                                                                        "path",
+                                                                        {
+                                                                          staticClass:
+                                                                            "opacity-75",
+                                                                          attrs: {
+                                                                            fill:
+                                                                              "currentColor",
+                                                                            d:
+                                                                              "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                                                                          }
+                                                                        }
+                                                                      )
+                                                                    ]
+                                                                  ),
+                                                                  _vm._v(
+                                                                    "\n                                                                        Create\n                                                                    "
+                                                                  )
+                                                                ]
+                                                              )
+                                                            ]
+                                                          : _vm.form
+                                                              .recentlySuccessful
+                                                          ? [
+                                                              _c(
+                                                                "button",
+                                                                {
+                                                                  staticClass:
+                                                                    "w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm",
+                                                                  attrs: {
+                                                                    type:
+                                                                      "submit"
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _c(
+                                                                    "svg",
+                                                                    {
+                                                                      staticClass:
+                                                                        "-ml-1 mr-2 h-5 w-5",
+                                                                      attrs: {
+                                                                        xmlns:
+                                                                          "http://www.w3.org/2000/svg",
+                                                                        viewBox:
+                                                                          "0 0 20 20",
+                                                                        fill:
+                                                                          "currentColor",
+                                                                        "aria-hidden":
+                                                                          "true"
+                                                                      }
+                                                                    },
+                                                                    [
+                                                                      _c(
+                                                                        "path",
+                                                                        {
+                                                                          attrs: {
+                                                                            "fill-rule":
+                                                                              "evenodd",
+                                                                            d:
+                                                                              "M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z",
+                                                                            "clip-rule":
+                                                                              "evenodd"
+                                                                          }
+                                                                        }
+                                                                      )
+                                                                    ]
+                                                                  ),
+                                                                  _vm._v(
+                                                                    "\n                                                                        Created\n                                                                    "
+                                                                  )
+                                                                ]
+                                                              )
+                                                            ]
+                                                          : [
+                                                              _c(
+                                                                "button",
+                                                                {
+                                                                  staticClass:
+                                                                    "w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm",
+                                                                  attrs: {
+                                                                    type:
+                                                                      "submit"
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    "\n                                                                        Create\n                                                                    "
+                                                                  )
+                                                                ]
+                                                              )
+                                                            ],
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "button",
+                                                          {
+                                                            staticClass:
+                                                              "mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:col-start-1 sm:text-sm",
+                                                            attrs: {
+                                                              type: "button"
+                                                            },
+                                                            on: {
+                                                              click: function(
+                                                                $event
+                                                              ) {
+                                                                _vm.isOpen = !_vm.isOpen
+                                                              }
+                                                            }
+                                                          },
+                                                          [
+                                                            _vm._v(
+                                                              "\n                                                                    Cancel\n                                                                "
+                                                            )
+                                                          ]
                                                         )
-                                                      ]
+                                                      ],
+                                                      2
                                                     )
-                                                  ],
-                                                  2
+                                                  ]
                                                 )
                                               ]
                                             )
-                                          ]
-                                        )
+                                          : _vm._e()
                                       ]
                                     )
-                                  ]
+                                  ],
+                                  1
                                 )
-                              : _vm._e()
+                              ]
+                            )
                           ]
                         )
                       ],
@@ -40856,7 +40875,7 @@ var render = function() {
                   staticClass:
                     "space-y-12 sm:grid sm:grid-cols-1 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-1 lg:gap-x-8"
                 },
-                _vm._l(_vm.$page["props"]["topics"], function(topic) {
+                _vm._l(_vm.$page["props"]["topics"], function(topic, index) {
                   return _c("li", { staticClass: "group" }, [
                     _c("div", { staticClass: "bg-gray-50 sm:rounded-lg" }, [
                       _c("div", { staticClass: "px-4 py-5 sm:p-6" }, [
@@ -40875,7 +40894,8 @@ var render = function() {
                           ]
                         ),
                         _vm._v(" "),
-                        _vm.$page["props"]["questions"][0]["questions"].length
+                        _vm.$page["props"]["questions"][index]["questions"]
+                          .length
                           ? _c(
                               "ul",
                               _vm._l(
@@ -40996,150 +41016,157 @@ var render = function() {
                             : _vm._e(),
                           _vm._v(" "),
                           _vm.addQuestion
-                            ? _c("div", { staticClass: "flex-row\t" }, [
-                                _c(
-                                  "form",
-                                  {
-                                    on: {
-                                      submit: function($event) {
-                                        $event.preventDefault()
-                                        return _vm.form.post(
-                                          "/site/form/question"
-                                        )
+                            ? _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "flex-row inline-flex items-center font-medium rounded-md text-gray-700 sm:text-sm"
+                                },
+                                [
+                                  _c(
+                                    "form",
+                                    {
+                                      on: {
+                                        submit: function($event) {
+                                          $event.preventDefault()
+                                          return _vm.form.post(
+                                            "/site/form/question"
+                                          )
+                                        }
                                       }
-                                    }
-                                  },
-                                  [
-                                    _vm.form.processing
-                                      ? [
-                                          _c(
-                                            "button",
-                                            {
-                                              staticClass:
-                                                "inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm",
-                                              attrs: { type: "button" }
-                                            },
-                                            [
-                                              _c(
-                                                "svg",
-                                                {
-                                                  staticClass:
-                                                    "animate-spin -ml-1 mr-3 h-5 w-5 text-white",
-                                                  attrs: {
-                                                    xmlns:
-                                                      "http://www.w3.org/2000/svg",
-                                                    fill: "none",
-                                                    viewBox: "0 0 24 24"
-                                                  }
-                                                },
-                                                [
-                                                  _c("circle", {
-                                                    staticClass: "opacity-25",
+                                    },
+                                    [
+                                      _vm.form.processing
+                                        ? [
+                                            _c(
+                                              "button",
+                                              {
+                                                staticClass:
+                                                  "inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm",
+                                                attrs: { type: "button" }
+                                              },
+                                              [
+                                                _c(
+                                                  "svg",
+                                                  {
+                                                    staticClass:
+                                                      "animate-spin -ml-1 mr-3 h-5 w-5 text-white",
                                                     attrs: {
-                                                      cx: "12",
-                                                      cy: "12",
-                                                      r: "10",
-                                                      stroke: "currentColor",
-                                                      "stroke-width": "4"
+                                                      xmlns:
+                                                        "http://www.w3.org/2000/svg",
+                                                      fill: "none",
+                                                      viewBox: "0 0 24 24"
                                                     }
-                                                  }),
-                                                  _vm._v(" "),
-                                                  _c("path", {
-                                                    staticClass: "opacity-75",
+                                                  },
+                                                  [
+                                                    _c("circle", {
+                                                      staticClass: "opacity-25",
+                                                      attrs: {
+                                                        cx: "12",
+                                                        cy: "12",
+                                                        r: "10",
+                                                        stroke: "currentColor",
+                                                        "stroke-width": "4"
+                                                      }
+                                                    }),
+                                                    _vm._v(" "),
+                                                    _c("path", {
+                                                      staticClass: "opacity-75",
+                                                      attrs: {
+                                                        fill: "currentColor",
+                                                        d:
+                                                          "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                                                      }
+                                                    })
+                                                  ]
+                                                ),
+                                                _vm._v(
+                                                  "\n\n                                                        Adding Question...\n                                                    "
+                                                )
+                                              ]
+                                            )
+                                          ]
+                                        : _vm._e(),
+                                      _vm._v(" "),
+                                      _vm.form.recentlySuccessful
+                                        ? [
+                                            _c(
+                                              "button",
+                                              {
+                                                staticClass:
+                                                  "inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm",
+                                                attrs: { type: "button" }
+                                              },
+                                              [
+                                                _c(
+                                                  "svg",
+                                                  {
+                                                    staticClass:
+                                                      "-ml-1 mr-2 h-5 w-5",
                                                     attrs: {
+                                                      xmlns:
+                                                        "http://www.w3.org/2000/svg",
+                                                      viewBox: "0 0 20 20",
                                                       fill: "currentColor",
-                                                      d:
-                                                        "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                                                      "aria-hidden": "true"
                                                     }
-                                                  })
-                                                ]
-                                              ),
-                                              _vm._v(
-                                                "\n\n                                                        Adding Question...\n                                                    "
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      : _vm._e(),
-                                    _vm._v(" "),
-                                    _vm.form.recentlySuccessful
-                                      ? [
-                                          _c(
-                                            "button",
-                                            {
-                                              staticClass:
-                                                "inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm",
-                                              attrs: { type: "button" }
-                                            },
-                                            [
-                                              _c(
-                                                "svg",
-                                                {
-                                                  staticClass:
-                                                    "-ml-1 mr-2 h-5 w-5",
-                                                  attrs: {
-                                                    xmlns:
-                                                      "http://www.w3.org/2000/svg",
-                                                    viewBox: "0 0 20 20",
-                                                    fill: "currentColor",
-                                                    "aria-hidden": "true"
-                                                  }
-                                                },
-                                                [
-                                                  _c("path", {
-                                                    attrs: {
-                                                      "fill-rule": "evenodd",
-                                                      d:
-                                                        "M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z",
-                                                      "clip-rule": "evenodd"
-                                                    }
-                                                  })
-                                                ]
-                                              ),
-                                              _vm._v(
-                                                "\n\n                                                        Added Question\n                                                    "
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      : [
-                                          _c(
-                                            "button",
-                                            {
-                                              staticClass:
-                                                "inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm",
-                                              attrs: { type: "submit" }
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                                                        Add Question\n                                                    "
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                  ],
-                                  2
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "button",
-                                  {
-                                    staticClass:
-                                      "inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm",
-                                    attrs: { type: "button" },
-                                    on: {
-                                      click: function($event) {
-                                        _vm.addQuestion = !_vm.addQuestion
+                                                  },
+                                                  [
+                                                    _c("path", {
+                                                      attrs: {
+                                                        "fill-rule": "evenodd",
+                                                        d:
+                                                          "M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z",
+                                                        "clip-rule": "evenodd"
+                                                      }
+                                                    })
+                                                  ]
+                                                ),
+                                                _vm._v(
+                                                  "\n\n                                                        Added Question\n                                                    "
+                                                )
+                                              ]
+                                            )
+                                          ]
+                                        : [
+                                            _c(
+                                              "button",
+                                              {
+                                                staticClass:
+                                                  "inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm",
+                                                attrs: { type: "submit" }
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "\n                                                        Add Question\n                                                    "
+                                                )
+                                              ]
+                                            )
+                                          ]
+                                    ],
+                                    2
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass:
+                                        "inline-flex items-center ml-2 px-4 py-2 border border-gray-300 shadow-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm",
+                                      attrs: { type: "button" },
+                                      on: {
+                                        click: function($event) {
+                                          _vm.addQuestion = !_vm.addQuestion
+                                        }
                                       }
-                                    }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                                Cancel\n                                            "
-                                    )
-                                  ]
-                                )
-                              ])
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                                Cancel\n                                            "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
                             : _vm._e()
                         ])
                       ])
@@ -41179,7 +41206,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "relative bg-white h-screen" }, [
+  return _c("div", { staticClass: "relative bg-white" }, [
     _vm._m(0),
     _vm._v(" "),
     _c(
@@ -41199,26 +41226,58 @@ var render = function() {
               },
               [
                 _vm._v(
-                  "\n                    " +
-                    _vm._s(_vm.$page["props"]["site"]["title"]) +
-                    "\n                "
+                  "\n                        " +
+                    _vm._s(_vm.$page["props"]["title"]) +
+                    "\n                    "
                 )
               ]
             ),
             _vm._v(" "),
-            _c(
-              "p",
-              {
-                staticClass: "mb-4 mt-4 text-lg text-gray-500 sm:mt-3 sm:mb-4"
-              },
-              [
-                _vm._v(
-                  "\n                    I’d love to hear from you! Send me a message using the forms below, or email me.\n                "
+            _vm.$page["props"]["questions"].length
+              ? _c(
+                  "form",
+                  {
+                    staticClass:
+                      "mt-9 block w-full space-y-0 sm:grid sm:grid-cols-1 sm:gap-y-6 sm:space-y-0 lg:grid-cols-1",
+                    attrs: { action: "#", method: "POST" }
+                  },
+                  [
+                    _c(
+                      "ul",
+                      {
+                        staticClass:
+                          "block w-full space-y-0 sm:grid sm:grid-cols-1 sm:gap-x-6 sm:gap-y-6 sm:space-y-0 lg:grid-cols-1 lg:gap-x-8"
+                      },
+                      _vm._l(_vm.$page["props"]["questions"], function(
+                        question
+                      ) {
+                        return _c("li", { staticClass: "group" }, [
+                          _c("div", { staticClass: "sm:col-span-2" }, [
+                            _c(
+                              "label",
+                              {
+                                staticClass:
+                                  "block text-sm font-medium text-gray-700",
+                                attrs: { for: "email" }
+                              },
+                              [_vm._v(_vm._s(question.text))]
+                            ),
+                            _vm._v(" "),
+                            _vm._m(1, true)
+                          ])
+                        ])
+                      }),
+                      0
+                    ),
+                    _vm._v(" "),
+                    _vm._m(2)
+                  ]
                 )
-              ]
-            ),
-            _vm._v(" "),
-            _vm._m(1)
+              : _c("p", { staticClass: "mt-4 text-lg text-gray-500 sm:mt-3" }, [
+                  _vm._v(
+                    "\n                        We don't have any questions for you right now, but keep in touch!\n                    "
+                  )
+                ])
           ])
         ])
       ]
@@ -41236,7 +41295,8 @@ var staticRenderFns = [
         { staticClass: "lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2" },
         [
           _c("img", {
-            staticClass: "h-56 w-full object-cover lg:absolute lg:h-full",
+            staticClass:
+              "h-56 w-full min-h-screen object-cover lg:absolute lg:h-full",
             attrs: {
               src:
                 "https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-1.2.1&ixqx=5XGNHivJgT&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80",
@@ -41251,326 +41311,38 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "form",
-      {
-        staticClass: "mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8",
-        attrs: { action: "#", method: "POST" }
-      },
-      [
-        _c("div", [
-          _c(
-            "label",
-            {
-              staticClass: "block text-sm font-medium text-gray-700",
-              attrs: { for: "first_name" }
-            },
-            [_vm._v("First name")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "mt-1" }, [
-            _c("input", {
-              staticClass:
-                "block w-full shadow-sm sm:text-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md",
-              attrs: {
-                type: "text",
-                name: "first_name",
-                id: "first_name",
-                autocomplete: "given-name"
-              }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _c(
-            "label",
-            {
-              staticClass: "block text-sm font-medium text-gray-700",
-              attrs: { for: "last_name" }
-            },
-            [_vm._v("Last name")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "mt-1" }, [
-            _c("input", {
-              staticClass:
-                "block w-full shadow-sm sm:text-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md",
-              attrs: {
-                type: "text",
-                name: "last_name",
-                id: "last_name",
-                autocomplete: "family-name"
-              }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "sm:col-span-2" }, [
-          _c(
-            "label",
-            {
-              staticClass: "block text-sm font-medium text-gray-700",
-              attrs: { for: "email" }
-            },
-            [_vm._v("Email")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "mt-1" }, [
-            _c("input", {
-              staticClass:
-                "block w-full shadow-sm sm:text-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md",
-              attrs: {
-                id: "email",
-                name: "email",
-                type: "email",
-                autocomplete: "email"
-              }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "sm:col-span-2" }, [
-          _c(
-            "label",
-            {
-              staticClass: "block text-sm font-medium text-gray-700",
-              attrs: { for: "company" }
-            },
-            [_vm._v("Company")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "mt-1" }, [
-            _c("input", {
-              staticClass:
-                "block w-full shadow-sm sm:text-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md",
-              attrs: {
-                type: "text",
-                name: "company",
-                id: "company",
-                autocomplete: "organization"
-              }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "sm:col-span-2" }, [
-          _c("div", { staticClass: "flex justify-between" }, [
-            _c(
-              "label",
-              {
-                staticClass: "block text-sm font-medium text-gray-700",
-                attrs: { for: "phone" }
-              },
-              [_vm._v("Phone")]
-            ),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "text-sm text-gray-500",
-                attrs: { id: "phone_description" }
-              },
-              [_vm._v("Optional")]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "mt-1" }, [
-            _c("input", {
-              staticClass:
-                "block w-full shadow-sm sm:text-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md",
-              attrs: {
-                type: "text",
-                name: "phone",
-                id: "phone",
-                autocomplete: "tel",
-                "aria-describedby": "phone_description"
-              }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "sm:col-span-2" }, [
-          _c("div", { staticClass: "flex justify-between" }, [
-            _c(
-              "label",
-              {
-                staticClass: "block text-sm font-medium text-gray-700",
-                attrs: { for: "how_can_we_help" }
-              },
-              [_vm._v("How can we\n                                help you?")]
-            ),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass: "text-sm text-gray-500",
-                attrs: { id: "how_can_we_help_description" }
-              },
-              [_vm._v("Max. 500 characters")]
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "mt-1" }, [
-            _c("textarea", {
-              staticClass:
-                "block w-full shadow-sm sm:text-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md",
-              attrs: {
-                id: "how_can_we_help",
-                name: "how_can_we_help",
-                "aria-describedby": "how_can_we_help_description",
-                rows: "4"
-              }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("fieldset", { staticClass: "sm:col-span-2" }, [
-          _c(
-            "legend",
-            { staticClass: "block text-sm font-medium text-gray-700" },
-            [
-              _vm._v(
-                "\n                            Expected budget\n                        "
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "mt-4 grid grid-cols-1 gap-y-4" }, [
-            _c("div", { staticClass: "flex items-center" }, [
-              _c("input", {
-                staticClass:
-                  "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300",
-                attrs: {
-                  id: "budget_under_25k",
-                  name: "budget",
-                  value: "under_25k",
-                  type: "radio"
-                }
-              }),
-              _vm._v(" "),
-              _c(
-                "label",
-                { staticClass: "ml-3", attrs: { for: "budget_under_25k" } },
-                [
-                  _c("span", { staticClass: "block text-sm text-gray-700" }, [
-                    _vm._v("Less than $25K")
-                  ])
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "flex items-center" }, [
-              _c("input", {
-                staticClass:
-                  "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300",
-                attrs: {
-                  id: "budget_25k-50k",
-                  name: "budget",
-                  value: "25k-50k",
-                  type: "radio"
-                }
-              }),
-              _vm._v(" "),
-              _c(
-                "label",
-                { staticClass: "ml-3", attrs: { for: "budget_25k-50k" } },
-                [
-                  _c("span", { staticClass: "block text-sm text-gray-700" }, [
-                    _vm._v("$25K – $50K")
-                  ])
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "flex items-center" }, [
-              _c("input", {
-                staticClass:
-                  "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300",
-                attrs: {
-                  id: "budget_50k-100k",
-                  name: "budget",
-                  value: "50k-100k",
-                  type: "radio"
-                }
-              }),
-              _vm._v(" "),
-              _c(
-                "label",
-                { staticClass: "ml-3", attrs: { for: "budget_50k-100k" } },
-                [
-                  _c("span", { staticClass: "block text-sm text-gray-700" }, [
-                    _vm._v("$50K – $100K")
-                  ])
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "flex items-center" }, [
-              _c("input", {
-                staticClass:
-                  "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300",
-                attrs: {
-                  id: "budget_over_100k",
-                  name: "budget",
-                  value: "over_100k",
-                  type: "radio"
-                }
-              }),
-              _vm._v(" "),
-              _c(
-                "label",
-                { staticClass: "ml-3", attrs: { for: "budget_over_100k" } },
-                [
-                  _c("span", { staticClass: "block text-sm text-gray-700" }, [
-                    _vm._v("$100K+")
-                  ])
-                ]
-              )
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "sm:col-span-2" }, [
-          _c(
-            "label",
-            {
-              staticClass: "block text-sm font-medium text-gray-700",
-              attrs: { for: "how_did_you_hear_about_us" }
-            },
-            [_vm._v("How\n                            did you hear about us?")]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "mt-1" }, [
-            _c("input", {
-              staticClass:
-                "shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md",
-              attrs: {
-                type: "text",
-                name: "how_did_you_hear_about_us",
-                id: "how_did_you_hear_about_us"
-              }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "text-right sm:col-span-2" }, [
-          _c(
-            "button",
-            {
-              staticClass:
-                "inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500",
-              attrs: { type: "submit" }
-            },
-            [
-              _vm._v(
-                "\n                            Submit\n                        "
-              )
-            ]
+    return _c("div", { staticClass: "mt-1" }, [
+      _c("input", {
+        staticClass:
+          "block w-full shadow-sm sm:text-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md",
+        attrs: {
+          id: "email",
+          name: "email",
+          type: "email",
+          autocomplete: "email"
+        }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "text-right sm:col-span-2" }, [
+      _c(
+        "button",
+        {
+          staticClass:
+            "inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500",
+          attrs: { type: "submit" }
+        },
+        [
+          _vm._v(
+            "\n                                Submit\n                            "
           )
-        ])
-      ]
-    )
+        ]
+      )
+    ])
   }
 ]
 render._withStripped = true
@@ -41635,7 +41407,8 @@ var render = function() {
                   _c(
                     "button",
                     {
-                      staticClass: "focus:outline-none",
+                      staticClass:
+                        "focus:outline-none aspect-w-3 aspect-h-2 rounded-lg justify-center items-center text-lg leading-6 font-medium",
                       on: {
                         click: function($event) {
                           _vm.isOpen = !_vm.isOpen
@@ -41683,7 +41456,11 @@ var render = function() {
                               staticClass:
                                 "text-lg leading-6 font-medium space-y-1"
                             },
-                            [_c("h3", [_vm._v("Create a New Site")])]
+                            [
+                              _c("h3", { staticClass: "text-left" }, [
+                                _vm._v("Create a New Site")
+                              ])
+                            ]
                           )
                         ])
                       ])
@@ -41704,328 +41481,379 @@ var render = function() {
                       }
                     },
                     [
-                      _vm.isOpen
-                        ? _c(
+                      _c(
+                        "div",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.isOpen,
+                              expression: "isOpen"
+                            }
+                          ],
+                          staticClass: "fixed z-10 inset-0 overflow-y-auto "
+                        },
+                        [
+                          _c(
                             "div",
                             {
-                              staticClass: "fixed z-10 inset-0 overflow-y-auto "
+                              staticClass:
+                                "flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
                             },
                             [
                               _c(
                                 "div",
                                 {
                                   staticClass:
-                                    "flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
+                                    "fixed inset-0 transition-opacity",
+                                  attrs: { "aria-hidden": "true" }
                                 },
                                 [
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "fixed inset-0 transition-opacity",
-                                      attrs: { "aria-hidden": "true" }
-                                    },
-                                    [
-                                      _c("div", {
-                                        staticClass:
-                                          "absolute inset-0 bg-gray-500 opacity-75"
-                                      })
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "span",
-                                    {
-                                      staticClass:
-                                        "hidden sm:inline-block sm:align-middle sm:h-screen",
-                                      attrs: { "aria-hidden": "true" }
-                                    },
-                                    [_vm._v("​")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6",
-                                      attrs: {
-                                        role: "dialog",
-                                        "aria-modal": "true",
-                                        "aria-labelledby": "modal-headline"
-                                      }
-                                    },
-                                    [
-                                      _c("div", [
-                                        _c(
-                                          "div",
-                                          {
-                                            staticClass:
-                                              "mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-purple-100"
-                                          },
-                                          [
+                                  _c("div", {
+                                    staticClass:
+                                      "absolute inset-0 bg-gray-500 opacity-75"
+                                  })
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "hidden sm:inline-block sm:align-middle sm:h-screen",
+                                  attrs: { "aria-hidden": "true" }
+                                },
+                                [_vm._v("​")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "transition",
+                                {
+                                  attrs: {
+                                    "enter-active-class":
+                                      "transition ease-out duration-300",
+                                    "enter-from-class":
+                                      "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95",
+                                    "enter-to-class":
+                                      "opacity-100 translate-y-0 sm:scale-100",
+                                    "leave-active-class":
+                                      "transition ease-in duration-200",
+                                    "leave-from-class":
+                                      "opacity-100 translate-y-0 sm:scale-100",
+                                    "leave-to-class":
+                                      "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                                  }
+                                },
+                                [
+                                  _vm.isOpen
+                                    ? _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6",
+                                          attrs: {
+                                            role: "dialog",
+                                            "aria-modal": "true",
+                                            "aria-labelledby": "modal-headline"
+                                          }
+                                        },
+                                        [
+                                          _c("div", [
                                             _c(
-                                              "svg",
+                                              "div",
                                               {
                                                 staticClass:
-                                                  "h-6 w-6 text-purple-600",
-                                                attrs: {
-                                                  xmlns:
-                                                    "http://www.w3.org/2000/svg",
-                                                  fill: "none",
-                                                  viewBox: "0 0 24 24",
-                                                  stroke: "currentColor",
-                                                  "aria-hidden": "true"
-                                                }
+                                                  "mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-purple-100"
                                               },
                                               [
-                                                _c("path", {
-                                                  attrs: {
-                                                    "stroke-linecap": "round",
-                                                    "stroke-linejoin": "round",
-                                                    "stroke-width": "2",
-                                                    d:
-                                                      "M12 6v6m0 0v6m0-6h6m-6 0H6"
-                                                  }
-                                                })
-                                              ]
-                                            )
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          {
-                                            staticClass:
-                                              "mt-3 text-center sm:mt-5"
-                                          },
-                                          [
-                                            _c(
-                                              "h3",
-                                              {
-                                                staticClass:
-                                                  "text-lg leading-6 font-medium text-gray-900",
-                                                attrs: { id: "modal-headline" }
-                                              },
-                                              [
-                                                _vm._v(
-                                                  "\n                                                Create a New Site\n                                            "
+                                                _c(
+                                                  "svg",
+                                                  {
+                                                    staticClass:
+                                                      "h-6 w-6 text-purple-600",
+                                                    attrs: {
+                                                      xmlns:
+                                                        "http://www.w3.org/2000/svg",
+                                                      fill: "none",
+                                                      viewBox: "0 0 24 24",
+                                                      stroke: "currentColor",
+                                                      "aria-hidden": "true"
+                                                    }
+                                                  },
+                                                  [
+                                                    _c("path", {
+                                                      attrs: {
+                                                        "stroke-linecap":
+                                                          "round",
+                                                        "stroke-linejoin":
+                                                          "round",
+                                                        "stroke-width": "2",
+                                                        d:
+                                                          "M12 6v6m0 0v6m0-6h6m-6 0H6"
+                                                      }
+                                                    })
+                                                  ]
                                                 )
                                               ]
                                             ),
                                             _vm._v(" "),
-                                            _c("div", { staticClass: "mt-2" }, [
+                                            _c(
+                                              "div",
+                                              {
+                                                staticClass:
+                                                  "mt-3 text-center sm:mt-5"
+                                              },
+                                              [
+                                                _c(
+                                                  "h3",
+                                                  {
+                                                    staticClass:
+                                                      "text-lg leading-6 font-medium text-gray-900",
+                                                    attrs: {
+                                                      id: "modal-headline"
+                                                    }
+                                                  },
+                                                  [
+                                                    _vm._v(
+                                                      "\n                                                    Create a New Site\n                                                "
+                                                    )
+                                                  ]
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "div",
+                                                  { staticClass: "mt-2" },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "col-span-6 sm:col-span-4"
+                                                      },
+                                                      [
+                                                        _c("jet-label", {
+                                                          attrs: {
+                                                            for: "name",
+                                                            value: "Name"
+                                                          }
+                                                        }),
+                                                        _vm._v(" "),
+                                                        _c("jet-input", {
+                                                          staticClass:
+                                                            "mt-1 block w-full",
+                                                          attrs: {
+                                                            id: "name",
+                                                            type: "text",
+                                                            placeholder:
+                                                              _vm.$page[
+                                                                "props"
+                                                              ]["name"]
+                                                          },
+                                                          model: {
+                                                            value:
+                                                              _vm.form.title,
+                                                            callback: function(
+                                                              $$v
+                                                            ) {
+                                                              _vm.$set(
+                                                                _vm.form,
+                                                                "title",
+                                                                $$v
+                                                              )
+                                                            },
+                                                            expression:
+                                                              "form.title"
+                                                          }
+                                                        })
+                                                      ],
+                                                      1
+                                                    )
+                                                  ]
+                                                )
+                                              ]
+                                            )
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "form",
+                                            {
+                                              on: {
+                                                submit: function($event) {
+                                                  $event.preventDefault()
+                                                  return _vm.form.post(
+                                                    "/site/new"
+                                                  )
+                                                }
+                                              }
+                                            },
+                                            [
                                               _c(
                                                 "div",
                                                 {
                                                   staticClass:
-                                                    "col-span-6 sm:col-span-4"
+                                                    "mt-5 sm:mt-6 sm:grid sm:grid-cols-2 sm:gap-3 sm:grid-flow-row-dense"
                                                 },
                                                 [
-                                                  _c("jet-label", {
-                                                    attrs: {
-                                                      for: "name",
-                                                      value: "Name"
-                                                    }
-                                                  }),
+                                                  _vm.form.processing
+                                                    ? [
+                                                        _c(
+                                                          "button",
+                                                          {
+                                                            staticClass:
+                                                              "w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm",
+                                                            attrs: {
+                                                              type: "submit"
+                                                            }
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "svg",
+                                                              {
+                                                                staticClass:
+                                                                  "animate-spin -ml-1 mr-3 h-5 w-5 text-white",
+                                                                attrs: {
+                                                                  xmlns:
+                                                                    "http://www.w3.org/2000/svg",
+                                                                  fill: "none",
+                                                                  viewBox:
+                                                                    "0 0 24 24"
+                                                                }
+                                                              },
+                                                              [
+                                                                _c("circle", {
+                                                                  staticClass:
+                                                                    "opacity-25",
+                                                                  attrs: {
+                                                                    cx: "12",
+                                                                    cy: "12",
+                                                                    r: "10",
+                                                                    stroke:
+                                                                      "currentColor",
+                                                                    "stroke-width":
+                                                                      "4"
+                                                                  }
+                                                                }),
+                                                                _vm._v(" "),
+                                                                _c("path", {
+                                                                  staticClass:
+                                                                    "opacity-75",
+                                                                  attrs: {
+                                                                    fill:
+                                                                      "currentColor",
+                                                                    d:
+                                                                      "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                                                                  }
+                                                                })
+                                                              ]
+                                                            ),
+                                                            _vm._v(
+                                                              "\n                                                        Create\n                                                    "
+                                                            )
+                                                          ]
+                                                        )
+                                                      ]
+                                                    : _vm.form
+                                                        .recentlySuccessful
+                                                    ? [
+                                                        _c(
+                                                          "button",
+                                                          {
+                                                            staticClass:
+                                                              "w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm",
+                                                            attrs: {
+                                                              type: "submit"
+                                                            }
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "svg",
+                                                              {
+                                                                staticClass:
+                                                                  "-ml-1 mr-2 h-5 w-5",
+                                                                attrs: {
+                                                                  xmlns:
+                                                                    "http://www.w3.org/2000/svg",
+                                                                  viewBox:
+                                                                    "0 0 20 20",
+                                                                  fill:
+                                                                    "currentColor",
+                                                                  "aria-hidden":
+                                                                    "true"
+                                                                }
+                                                              },
+                                                              [
+                                                                _c("path", {
+                                                                  attrs: {
+                                                                    "fill-rule":
+                                                                      "evenodd",
+                                                                    d:
+                                                                      "M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z",
+                                                                    "clip-rule":
+                                                                      "evenodd"
+                                                                  }
+                                                                })
+                                                              ]
+                                                            ),
+                                                            _vm._v(
+                                                              "\n                                                        Created\n                                                    "
+                                                            )
+                                                          ]
+                                                        )
+                                                      ]
+                                                    : [
+                                                        _c(
+                                                          "button",
+                                                          {
+                                                            staticClass:
+                                                              "w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm",
+                                                            attrs: {
+                                                              type: "submit"
+                                                            }
+                                                          },
+                                                          [
+                                                            _vm._v(
+                                                              "\n                                                        Create\n                                                    "
+                                                            )
+                                                          ]
+                                                        )
+                                                      ],
                                                   _vm._v(" "),
-                                                  _c("jet-input", {
-                                                    staticClass:
-                                                      "mt-1 block w-full",
-                                                    attrs: {
-                                                      id: "name",
-                                                      type: "text"
+                                                  _c(
+                                                    "button",
+                                                    {
+                                                      staticClass:
+                                                        "mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:col-start-1 sm:text-sm",
+                                                      attrs: { type: "button" },
+                                                      on: {
+                                                        click: function(
+                                                          $event
+                                                        ) {
+                                                          _vm.isOpen = !_vm.isOpen
+                                                        }
+                                                      }
                                                     },
-                                                    model: {
-                                                      value: _vm.form.title,
-                                                      callback: function($$v) {
-                                                        _vm.$set(
-                                                          _vm.form,
-                                                          "title",
-                                                          $$v
-                                                        )
-                                                      },
-                                                      expression: "form.title"
-                                                    }
-                                                  })
-                                                ],
-                                                1
-                                              )
-                                            ])
-                                          ]
-                                        )
-                                      ]),
-                                      _vm._v(" "),
-                                      _c(
-                                        "form",
-                                        {
-                                          on: {
-                                            submit: function($event) {
-                                              $event.preventDefault()
-                                              return _vm.form.post("/site/new")
-                                            }
-                                          }
-                                        },
-                                        [
-                                          _c(
-                                            "div",
-                                            {
-                                              staticClass:
-                                                "mt-5 sm:mt-6 sm:grid sm:grid-cols-2 sm:gap-3 sm:grid-flow-row-dense"
-                                            },
-                                            [
-                                              _vm.form.processing
-                                                ? [
-                                                    _c(
-                                                      "button",
-                                                      {
-                                                        staticClass:
-                                                          "w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm",
-                                                        attrs: {
-                                                          type: "submit"
-                                                        }
-                                                      },
-                                                      [
-                                                        _c(
-                                                          "svg",
-                                                          {
-                                                            staticClass:
-                                                              "animate-spin -ml-1 mr-3 h-5 w-5 text-white",
-                                                            attrs: {
-                                                              xmlns:
-                                                                "http://www.w3.org/2000/svg",
-                                                              fill: "none",
-                                                              viewBox:
-                                                                "0 0 24 24"
-                                                            }
-                                                          },
-                                                          [
-                                                            _c("circle", {
-                                                              staticClass:
-                                                                "opacity-25",
-                                                              attrs: {
-                                                                cx: "12",
-                                                                cy: "12",
-                                                                r: "10",
-                                                                stroke:
-                                                                  "currentColor",
-                                                                "stroke-width":
-                                                                  "4"
-                                                              }
-                                                            }),
-                                                            _vm._v(" "),
-                                                            _c("path", {
-                                                              staticClass:
-                                                                "opacity-75",
-                                                              attrs: {
-                                                                fill:
-                                                                  "currentColor",
-                                                                d:
-                                                                  "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                                                              }
-                                                            })
-                                                          ]
-                                                        ),
-                                                        _vm._v(
-                                                          "\n                                                    Create\n                                                "
-                                                        )
-                                                      ]
-                                                    )
-                                                  ]
-                                                : _vm.form.recentlySuccessful
-                                                ? [
-                                                    _c(
-                                                      "button",
-                                                      {
-                                                        staticClass:
-                                                          "w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm",
-                                                        attrs: {
-                                                          type: "submit"
-                                                        }
-                                                      },
-                                                      [
-                                                        _c(
-                                                          "svg",
-                                                          {
-                                                            staticClass:
-                                                              "-ml-1 mr-2 h-5 w-5",
-                                                            attrs: {
-                                                              xmlns:
-                                                                "http://www.w3.org/2000/svg",
-                                                              viewBox:
-                                                                "0 0 20 20",
-                                                              fill:
-                                                                "currentColor",
-                                                              "aria-hidden":
-                                                                "true"
-                                                            }
-                                                          },
-                                                          [
-                                                            _c("path", {
-                                                              attrs: {
-                                                                "fill-rule":
-                                                                  "evenodd",
-                                                                d:
-                                                                  "M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z",
-                                                                "clip-rule":
-                                                                  "evenodd"
-                                                              }
-                                                            })
-                                                          ]
-                                                        ),
-                                                        _vm._v(
-                                                          "\n                                                    Created\n                                                "
-                                                        )
-                                                      ]
-                                                    )
-                                                  ]
-                                                : [
-                                                    _c(
-                                                      "button",
-                                                      {
-                                                        staticClass:
-                                                          "w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm",
-                                                        attrs: {
-                                                          type: "submit"
-                                                        }
-                                                      },
-                                                      [
-                                                        _vm._v(
-                                                          "\n                                                    Create\n                                                "
-                                                        )
-                                                      ]
-                                                    )
-                                                  ],
-                                              _vm._v(" "),
-                                              _c(
-                                                "button",
-                                                {
-                                                  staticClass:
-                                                    "mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:col-start-1 sm:text-sm",
-                                                  attrs: { type: "button" },
-                                                  on: {
-                                                    click: function($event) {
-                                                      _vm.isOpen = !_vm.isOpen
-                                                    }
-                                                  }
-                                                },
-                                                [
-                                                  _vm._v(
-                                                    "\n                                                Cancel\n                                            "
+                                                    [
+                                                      _vm._v(
+                                                        "\n                                                    Cancel\n                                                "
+                                                      )
+                                                    ]
                                                   )
-                                                ]
+                                                ],
+                                                2
                                               )
-                                            ],
-                                            2
+                                            ]
                                           )
                                         ]
                                       )
-                                    ]
-                                  )
+                                    : _vm._e()
                                 ]
                               )
-                            ]
+                            ],
+                            1
                           )
-                        : _vm._e()
+                        ]
+                      )
                     ]
                   ),
                   _vm._v(" "),
@@ -42173,7 +42001,14 @@ var render = function() {
                       [
                         _c(
                           "inertia-link",
-                          { attrs: { href: _vm.route("site.index", topic) } },
+                          {
+                            attrs: {
+                              href: _vm.route("site.form.show", {
+                                site: _vm.site.uuid,
+                                form: topic.uuid
+                              })
+                            }
+                          },
                           [
                             _c(
                               "div",
