@@ -39,4 +39,5 @@ Route::get('site/{site}/form/{form}', 'App\Http\Controllers\TopicController@show
 Route::post('/waitlist', 'App\Http\Controllers\WaitlistController@store');
 Route::post('/site/new', 'App\Http\Controllers\SiteController@store');
 Route::post('/site/form', 'App\Http\Controllers\TopicController@store');
+Route::post('/site/delete-form', 'App\Http\Controllers\TopicController@destroy');
 Route::post('/site/form/question', 'App\Http\Controllers\QuestionController@store');

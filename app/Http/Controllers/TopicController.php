@@ -94,12 +94,14 @@ class TopicController extends Controller
 
     /**
      * Remove the specified resource from storage.
-     *
-     * @param \App\Models\Property\Property $property
-     * @return \Illuminate\Http\Response
+     *\
      */
-    public function destroy(Site $site)
+    public function destroy(Request $request)
     {
-        $site->delete();
+        Topic::find($request->get('topic_id'))->delete();
+
+        return Inertia::render('Sites/Edit', [
+            'site' => Site::find($request->get('site_id'))
+        ]);
     }
 }

@@ -55,69 +55,69 @@
     <!--END OF PATTERN-->
 
     <div class="relative bg-white h-screen">
-        <div class="lg:absolute lg:inset-0">
-            <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-                <img class="h-56 w-full object-cover lg:absolute lg:h-full"
+        <div class="lg:fixed">
+            <div class="lg:fixed w-full">
+                <img class="h-56 w-full object-cover lg:fixed lg:h-full"
                      src="https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-1.2.1&ixqx=5XGNHivJgT&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80"
                      alt="">
             </div>
         </div>
         <div
-            class="relative pt-12 pb-16 px-4 sm:pt-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2">
-            <div class="lg:pr-8">
-                <div class="max-w-md mx-auto sm:max-w-lg lg:mx-0">
-                    <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
-                        {{ $page['props']['site']['title'] }}
-                    </h2>
-                    <p class="mb-4 mt-4 text-lg text-gray-500 sm:mt-3 sm:mb-4">
-                        I’d love to hear from you! Send me a message using the forms below, or email me.
-                    </p>
+            class="relative pt-12 pb-16 px-4 sm:pt-16 sm:px-6 lg:px-20 lg:max-w-3xl lg:mx-auto bg-white h-full justify-items-center">
 
 
-                    <!--LIST OF FORMS-->
-                    <!-- This example requires Tailwind CSS v2.0+ -->
-                    <ul v-if="$page['props']['topics'].length">
-                        <li v-for="(topic) in $page['props']['topics']"
-                            class="group">
-                            <inertia-link :href="route('site.form.show', {
+            <h2 class="text-center	text-3xl font-extrabold tracking-tight sm:text-4xl">
+                {{ $page['props']['site']['title'] }}
+            </h2>
+            <p class="text-center	mb-4 mt-4 text-lg text-gray-500 sm:mt-3 sm:mb-4">
+                I’d love to hear from you! Send me a message using the forms below, or email me.
+            </p>
+
+
+            <!--LIST OF FORMS-->
+            <!-- This example requires Tailwind CSS v2.0+ -->
+            <ul v-if="$page['props']['topics'].length">
+                <li v-for="(topic) in $page['props']['topics']"
+                    class="group">
+                    <inertia-link :href="route('site.form.show', {
                                 site:  site.uuid,
                                 form: topic.uuid
                             })">
-                                <div class="mb-5 bg-white shadow sm:rounded-lg sm:mb-4">
-                                    <div class="px-4 py-5 sm:p-6">
-                                        <div class="sm:flex sm:items-start sm:justify-between">
-                                            <div>
-                                                <h3 class="text-lg leading-6 font-medium text-gray-900">
-                                                    {{ topic.text }}
-                                                </h3>
-                                                <!--                                            <div class="mt-2 max-w-xl text-sm text-gray-500">-->
-                                                <!--                                                <p>-->
-                                                <!--                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae-->
-                                                <!--                                                    voluptatibus corrupti atque repudiandae nam.-->
-                                                <!--                                                </p>-->
-                                                <!--                                            </div>-->
-                                            </div>
-                                            <div class="mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
-                                                <button type="button"
-                                                        class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm">
-                                                    Go
-                                                </button>
-                                            </div>
-                                        </div>
+                        <div class="mb-5 bg-white shadow sm:rounded-lg sm:mb-4">
+                            <div class="px-4 py-5 sm:p-6">
+                                <div class="sm:flex sm:items-start sm:justify-between">
+                                    <div>
+                                        <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                            {{ topic.text }}
+                                        </h3>
+                                        <!--                                            <div class="mt-2 max-w-xl text-sm text-gray-500">-->
+                                        <!--                                                <p>-->
+                                        <!--                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae-->
+                                        <!--                                                    voluptatibus corrupti atque repudiandae nam.-->
+                                        <!--                                                </p>-->
+                                        <!--                                            </div>-->
+                                    </div>
+                                    <div class="mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
+                                        <button type="button"
+                                                class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm">
+                                            Go
+                                        </button>
                                     </div>
                                 </div>
-                            </inertia-link>
-                        </li>
-                    </ul>
-                    <div v-else class="mt-2 max-w-xl text-sm text-gray-500">
-                        <!--                        <p>-->
-                        <!--                            No questions-->
-                        <!--                        </p>-->
-                    </div>
-
-
-                </div>
+                            </div>
+                        </div>
+                    </inertia-link>
+                </li>
+            </ul>
+            <div v-else class="mt-2 max-w-xl text-sm text-gray-500">
+                <!--                        <p>-->
+                <!--                            No questions-->
+                <!--                        </p>-->
             </div>
+
+
+            <!--                </div>-->
+            <!--            </div>-->
         </div>
     </div>
 

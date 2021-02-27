@@ -7506,16 +7506,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -7545,7 +7535,7 @@ __webpack_require__.r(__webpack_exports__);
       form: this.$inertia.form({
         text: '',
         question: '',
-        topic_id: 1,
+        topic_id: 0,
         site_id: this.site.id
       })
     };
@@ -7565,7 +7555,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
 //
 //
 //
@@ -34548,7 +34537,7 @@ var render = function() {
                       [
                         _c(
                           "inertia-link",
-                          { attrs: { href: _vm.route("dashboard") } },
+                          { attrs: { href: _vm.route("site.index") } },
                           [
                             _c("jet-application-mark", {
                               staticClass: "block h-9 w-auto"
@@ -40327,7 +40316,7 @@ var render = function() {
                               ]
                             ),
                             _vm._v(
-                              "\n                        View\n                        "
+                              "\n                        Preview\n                        "
                             )
                           ]
                         )
@@ -40869,312 +40858,180 @@ var render = function() {
               _vm._v(" "),
               _c("section-border"),
               _vm._v(" "),
-              _c(
-                "ul",
-                {
-                  staticClass:
-                    "space-y-12 sm:grid sm:grid-cols-1 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-1 lg:gap-x-8"
-                },
-                _vm._l(_vm.$page["props"]["topics"], function(topic, index) {
-                  return _c("li", { staticClass: "group" }, [
-                    _c("div", { staticClass: "bg-gray-50 sm:rounded-lg" }, [
-                      _c("div", { staticClass: "px-4 py-5 sm:p-6" }, [
-                        _c(
-                          "h3",
-                          {
-                            staticClass:
-                              "text-lg leading-6 font-medium text-gray-900"
-                          },
-                          [
-                            _vm._v(
-                              "\n                                        " +
-                                _vm._s(topic.text) +
-                                "\n                                    "
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _vm.$page["props"]["questions"][index]["questions"]
-                          .length
-                          ? _c(
-                              "ul",
-                              _vm._l(
-                                _vm.$page["props"]["questions"][0]["questions"],
-                                function(question, index) {
-                                  return _c("li", { staticClass: "group" }, [
-                                    _c(
-                                      "div",
-                                      {
-                                        staticClass:
-                                          "mt-2 max-w-xl text-sm text-gray-500"
-                                      },
-                                      [
-                                        _c("p", [
-                                          _vm._v(
-                                            "\n                                                    " +
-                                              _vm._s(
-                                                question == null
-                                                  ? "No questions"
-                                                  : index +
-                                                      1 +
-                                                      ". " +
-                                                      question["text"]
-                                              ) +
-                                              "\n                                                "
-                                          )
-                                        ])
-                                      ]
-                                    )
-                                  ])
-                                }
-                              ),
-                              0
-                            )
-                          : _c(
-                              "div",
+              _c("div", { staticClass: "pb-5" }, [
+                _c(
+                  "h3",
+                  {
+                    staticClass: "text-lg leading-6 font-medium text-gray-900"
+                  },
+                  [
+                    _vm._v(
+                      "\n                            Links\n                        "
+                    )
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 max-w-4xl text-sm text-gray-500" }, [
+                _vm._v(
+                  "\n                        Coming soon!\n                    "
+                )
+              ]),
+              _vm._v(" "),
+              _c("section-border"),
+              _vm._v(" "),
+              _c("div", { staticClass: "pb-5" }, [
+                _c(
+                  "h3",
+                  {
+                    staticClass: "text-lg leading-6 font-medium text-gray-900"
+                  },
+                  [
+                    _vm._v(
+                      "\n                            Forms\n                        "
+                    )
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _vm.$page["props"]["topics"].length
+                ? _c(
+                    "ul",
+                    {
+                      staticClass:
+                        "space-y-12 sm:grid sm:grid-cols-1 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-1 lg:gap-x-8"
+                    },
+                    _vm._l(_vm.$page["props"]["topics"], function(
+                      topic,
+                      index
+                    ) {
+                      return _c("li", { staticClass: "group" }, [
+                        _c("div", { staticClass: "bg-gray-50 sm:rounded-lg" }, [
+                          _c("div", { staticClass: "px-4 py-5 sm:p-6" }, [
+                            _c(
+                              "h3",
                               {
                                 staticClass:
-                                  "mt-2 max-w-xl text-sm text-gray-500"
+                                  "text-lg leading-6 font-medium text-gray-900"
                               },
                               [
-                                _c("p", [
-                                  _vm._v(
-                                    "\n                                            No questions\n                                        "
-                                  )
-                                ])
+                                _vm._v(
+                                  "\n                                        " +
+                                    _vm._s(topic.text) +
+                                    "\n                                    "
+                                )
                               ]
                             ),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "mt-5" }, [
-                          _vm.addQuestion
-                            ? _c("div", { staticClass: "mb-5" }, [
-                                _c(
-                                  "label",
+                            _vm._v(" "),
+                            _vm.$page["props"]["questions"][index]["questions"]
+                              .length
+                              ? _c(
+                                  "div",
                                   {
                                     staticClass:
-                                      "block text-sm font-medium text-gray-700",
-                                    attrs: { for: "question" }
+                                      "mt-2 max-w-xl text-sm text-gray-500"
                                   },
-                                  [_vm._v("Question")]
+                                  [
+                                    _c("p", [
+                                      _vm._v(
+                                        "\n                                            " +
+                                          _vm._s(
+                                            _vm.$page["props"]["questions"][
+                                              index
+                                            ]["questions"].length + " questions"
+                                          ) +
+                                          "\n                                        "
+                                      )
+                                    ])
+                                  ]
+                                )
+                              : _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "mt-2 max-w-xl text-sm text-gray-500"
+                                  },
+                                  [
+                                    _c("p", [
+                                      _vm._v(
+                                        "\n                                            No questions\n                                        "
+                                      )
+                                    ])
+                                  ]
+                                ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "mt-5 flex justify-between" },
+                              [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass:
+                                      "inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm",
+                                    attrs: { type: "button" }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                            Edit form\n                                        "
+                                    )
+                                  ]
                                 ),
                                 _vm._v(" "),
-                                _c("div", { staticClass: "mt-1" }, [
-                                  _c("input", {
-                                    directives: [
-                                      {
-                                        name: "model",
-                                        rawName: "v-model",
-                                        value: _vm.form.question,
-                                        expression: "form.question"
-                                      }
-                                    ],
-                                    staticClass:
-                                      "shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md",
-                                    attrs: {
-                                      type: "text",
-                                      name: "question",
-                                      id: "question",
-                                      placeholder: "How Many Bedrooms?"
-                                    },
-                                    domProps: { value: _vm.form.question },
+                                _c(
+                                  "form",
+                                  {
                                     on: {
-                                      input: function($event) {
-                                        if ($event.target.composing) {
-                                          return
-                                        }
-                                        _vm.$set(
-                                          _vm.form,
-                                          "question",
-                                          $event.target.value
+                                      submit: function($event) {
+                                        $event.preventDefault()
+                                        return _vm.form.post(
+                                          "/site/delete-form"
                                         )
                                       }
                                     }
-                                  })
-                                ])
-                              ])
-                            : _vm._e(),
-                          _vm._v(" "),
-                          !_vm.addQuestion
-                            ? _c(
-                                "button",
-                                {
-                                  staticClass:
-                                    "inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm",
-                                  attrs: { type: "button" },
-                                  on: {
-                                    click: function($event) {
-                                      _vm.addQuestion = !_vm.addQuestion
-                                    }
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                            Add Question\n                                        "
-                                  )
-                                ]
-                              )
-                            : _vm._e(),
-                          _vm._v(" "),
-                          _vm.addQuestion
-                            ? _c(
-                                "div",
-                                {
-                                  staticClass:
-                                    "flex-row inline-flex items-center font-medium rounded-md text-gray-700 sm:text-sm"
-                                },
-                                [
-                                  _c(
-                                    "form",
-                                    {
-                                      on: {
-                                        submit: function($event) {
-                                          $event.preventDefault()
-                                          return _vm.form.post(
-                                            "/site/form/question"
-                                          )
+                                  },
+                                  [
+                                    _c(
+                                      "button",
+                                      {
+                                        staticClass:
+                                          "inline-flex items-center px-4 py-2 border border-transparent shadow-sm font-medium rounded-md text-red-700 bg-red-100 hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:text-sm",
+                                        attrs: {
+                                          value: topic.id,
+                                          type: "submit"
+                                        },
+                                        on: {
+                                          click: function($event) {
+                                            _vm.form.topic_id =
+                                              $event.target.value
+                                          }
                                         }
-                                      }
-                                    },
-                                    [
-                                      _vm.form.processing
-                                        ? [
-                                            _c(
-                                              "button",
-                                              {
-                                                staticClass:
-                                                  "inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm",
-                                                attrs: { type: "button" }
-                                              },
-                                              [
-                                                _c(
-                                                  "svg",
-                                                  {
-                                                    staticClass:
-                                                      "animate-spin -ml-1 mr-3 h-5 w-5 text-white",
-                                                    attrs: {
-                                                      xmlns:
-                                                        "http://www.w3.org/2000/svg",
-                                                      fill: "none",
-                                                      viewBox: "0 0 24 24"
-                                                    }
-                                                  },
-                                                  [
-                                                    _c("circle", {
-                                                      staticClass: "opacity-25",
-                                                      attrs: {
-                                                        cx: "12",
-                                                        cy: "12",
-                                                        r: "10",
-                                                        stroke: "currentColor",
-                                                        "stroke-width": "4"
-                                                      }
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _c("path", {
-                                                      staticClass: "opacity-75",
-                                                      attrs: {
-                                                        fill: "currentColor",
-                                                        d:
-                                                          "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                                                      }
-                                                    })
-                                                  ]
-                                                ),
-                                                _vm._v(
-                                                  "\n\n                                                        Adding Question...\n                                                    "
-                                                )
-                                              ]
-                                            )
-                                          ]
-                                        : _vm._e(),
-                                      _vm._v(" "),
-                                      _vm.form.recentlySuccessful
-                                        ? [
-                                            _c(
-                                              "button",
-                                              {
-                                                staticClass:
-                                                  "inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm",
-                                                attrs: { type: "button" }
-                                              },
-                                              [
-                                                _c(
-                                                  "svg",
-                                                  {
-                                                    staticClass:
-                                                      "-ml-1 mr-2 h-5 w-5",
-                                                    attrs: {
-                                                      xmlns:
-                                                        "http://www.w3.org/2000/svg",
-                                                      viewBox: "0 0 20 20",
-                                                      fill: "currentColor",
-                                                      "aria-hidden": "true"
-                                                    }
-                                                  },
-                                                  [
-                                                    _c("path", {
-                                                      attrs: {
-                                                        "fill-rule": "evenodd",
-                                                        d:
-                                                          "M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z",
-                                                        "clip-rule": "evenodd"
-                                                      }
-                                                    })
-                                                  ]
-                                                ),
-                                                _vm._v(
-                                                  "\n\n                                                        Added Question\n                                                    "
-                                                )
-                                              ]
-                                            )
-                                          ]
-                                        : [
-                                            _c(
-                                              "button",
-                                              {
-                                                staticClass:
-                                                  "inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm",
-                                                attrs: { type: "submit" }
-                                              },
-                                              [
-                                                _vm._v(
-                                                  "\n                                                        Add Question\n                                                    "
-                                                )
-                                              ]
-                                            )
-                                          ]
-                                    ],
-                                    2
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "button",
-                                    {
-                                      staticClass:
-                                        "inline-flex items-center ml-2 px-4 py-2 border border-gray-300 shadow-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm",
-                                      attrs: { type: "button" },
-                                      on: {
-                                        click: function($event) {
-                                          _vm.addQuestion = !_vm.addQuestion
-                                        }
-                                      }
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                                                Cancel\n                                            "
-                                      )
-                                    ]
-                                  )
-                                ]
-                              )
-                            : _vm._e()
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                                Delete\n                                            "
+                                        )
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ])
                         ])
                       ])
-                    ])
-                  ])
-                }),
-                0
-              )
+                    }),
+                    0
+                  )
+                : _c(
+                    "p",
+                    { staticClass: "mt-2 max-w-4xl text-sm text-gray-500" },
+                    [
+                      _vm._v(
+                        "You haven't made any forms yet. Click the\n                        create form button on the top to get started!"
+                      )
+                    ]
+                  )
             ],
             1
           )
@@ -41213,73 +41070,71 @@ var render = function() {
       "div",
       {
         staticClass:
-          "relative pt-12 pb-16 px-4 sm:pt-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2"
+          "relative pt-12 pb-16 px-4 sm:pt-16 sm:px-6 lg:px-20 lg:max-w-3xl lg:mx-auto bg-white h-full justify-items-center"
       },
       [
-        _c("div", { staticClass: "lg:pr-8" }, [
-          _c("div", { staticClass: "max-w-md mx-auto sm:max-w-lg lg:mx-0" }, [
-            _c(
-              "h2",
+        _c(
+          "h2",
+          {
+            staticClass:
+              "text-center\ttext-3xl font-extrabold tracking-tight sm:text-4xl"
+          },
+          [
+            _vm._v(
+              "\n                " +
+                _vm._s(_vm.$page["props"]["title"]) +
+                "\n            "
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _vm.$page["props"]["questions"].length
+          ? _c(
+              "form",
               {
                 staticClass:
-                  "text-3xl font-extrabold tracking-tight sm:text-4xl"
+                  "mt-9 block w-full space-y-0 sm:grid sm:grid-cols-1 sm:gap-y-6 sm:space-y-0 lg:grid-cols-1",
+                attrs: { action: "#", method: "POST" }
               },
               [
-                _vm._v(
-                  "\n                        " +
-                    _vm._s(_vm.$page["props"]["title"]) +
-                    "\n                    "
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _vm.$page["props"]["questions"].length
-              ? _c(
-                  "form",
+                _c(
+                  "ul",
                   {
                     staticClass:
-                      "mt-9 block w-full space-y-0 sm:grid sm:grid-cols-1 sm:gap-y-6 sm:space-y-0 lg:grid-cols-1",
-                    attrs: { action: "#", method: "POST" }
+                      "block w-full space-y-0 sm:grid sm:grid-cols-1 sm:gap-x-6 sm:gap-y-6 sm:space-y-0 lg:grid-cols-1 lg:gap-x-8"
                   },
-                  [
-                    _c(
-                      "ul",
-                      {
-                        staticClass:
-                          "block w-full space-y-0 sm:grid sm:grid-cols-1 sm:gap-x-6 sm:gap-y-6 sm:space-y-0 lg:grid-cols-1 lg:gap-x-8"
-                      },
-                      _vm._l(_vm.$page["props"]["questions"], function(
-                        question
-                      ) {
-                        return _c("li", { staticClass: "group" }, [
-                          _c("div", { staticClass: "sm:col-span-2" }, [
-                            _c(
-                              "label",
-                              {
-                                staticClass:
-                                  "block text-sm font-medium text-gray-700",
-                                attrs: { for: "email" }
-                              },
-                              [_vm._v(_vm._s(question.text))]
-                            ),
-                            _vm._v(" "),
-                            _vm._m(1, true)
-                          ])
-                        ])
-                      }),
-                      0
-                    ),
-                    _vm._v(" "),
-                    _vm._m(2)
-                  ]
+                  _vm._l(_vm.$page["props"]["questions"], function(question) {
+                    return _c("li", { staticClass: "group" }, [
+                      _c("div", { staticClass: "sm:col-span-2" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass:
+                              "block text-sm font-medium text-gray-700",
+                            attrs: { for: "email" }
+                          },
+                          [_vm._v(_vm._s(question.text))]
+                        ),
+                        _vm._v(" "),
+                        _vm._m(1, true)
+                      ])
+                    ])
+                  }),
+                  0
+                ),
+                _vm._v(" "),
+                _vm._m(2)
+              ]
+            )
+          : _c(
+              "p",
+              { staticClass: "text-center mt-4 text-lg text-gray-500 sm:mt-3" },
+              [
+                _vm._v(
+                  "\n                We don't have any questions for you right now, but keep in touch!\n            "
                 )
-              : _c("p", { staticClass: "mt-4 text-lg text-gray-500 sm:mt-3" }, [
-                  _vm._v(
-                    "\n                        We don't have any questions for you right now, but keep in touch!\n                    "
-                  )
-                ])
-          ])
-        ])
+              ]
+            )
       ]
     )
   ])
@@ -41289,22 +41144,17 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "lg:absolute lg:inset-0" }, [
-      _c(
-        "div",
-        { staticClass: "lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2" },
-        [
-          _c("img", {
-            staticClass:
-              "h-56 w-full min-h-screen object-cover lg:absolute lg:h-full",
-            attrs: {
-              src:
-                "https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-1.2.1&ixqx=5XGNHivJgT&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80",
-              alt: ""
-            }
-          })
-        ]
-      )
+    return _c("div", { staticClass: "lg:fixed" }, [
+      _c("div", { staticClass: "lg:fixed w-full" }, [
+        _c("img", {
+          staticClass: "h-56 w-full object-cover lg:fixed lg:h-full",
+          attrs: {
+            src:
+              "https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-1.2.1&ixqx=5XGNHivJgT&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80",
+            alt: ""
+          }
+        })
+      ])
     ])
   },
   function() {
@@ -41315,12 +41165,7 @@ var staticRenderFns = [
       _c("input", {
         staticClass:
           "block w-full shadow-sm sm:text-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md",
-        attrs: {
-          id: "email",
-          name: "email",
-          type: "email",
-          autocomplete: "email"
-        }
+        attrs: { id: "email", name: "email", type: "email" }
       })
     ])
   },
@@ -41336,11 +41181,7 @@ var staticRenderFns = [
             "inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500",
           attrs: { type: "submit" }
         },
-        [
-          _vm._v(
-            "\n                                Submit\n                            "
-          )
-        ]
+        [_vm._v("\n                        Submit\n                    ")]
       )
     ])
   }
@@ -41959,129 +41800,124 @@ var render = function() {
       "div",
       {
         staticClass:
-          "relative pt-12 pb-16 px-4 sm:pt-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2"
+          "relative pt-12 pb-16 px-4 sm:pt-16 sm:px-6 lg:px-20 lg:max-w-3xl lg:mx-auto bg-white h-full justify-items-center"
       },
       [
-        _c("div", { staticClass: "lg:pr-8" }, [
-          _c("div", { staticClass: "max-w-md mx-auto sm:max-w-lg lg:mx-0" }, [
-            _c(
-              "h2",
-              {
-                staticClass:
-                  "text-3xl font-extrabold tracking-tight sm:text-4xl"
-              },
-              [
-                _vm._v(
-                  "\n                        " +
-                    _vm._s(_vm.$page["props"]["site"]["title"]) +
-                    "\n                    "
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "p",
-              {
-                staticClass: "mb-4 mt-4 text-lg text-gray-500 sm:mt-3 sm:mb-4"
-              },
-              [
-                _vm._v(
-                  "\n                        I’d love to hear from you! Send me a message using the forms below, or email me.\n                    "
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _vm.$page["props"]["topics"].length
-              ? _c(
-                  "ul",
-                  _vm._l(_vm.$page["props"]["topics"], function(topic) {
-                    return _c(
-                      "li",
-                      { staticClass: "group" },
+        _c(
+          "h2",
+          {
+            staticClass:
+              "text-center\ttext-3xl font-extrabold tracking-tight sm:text-4xl"
+          },
+          [
+            _vm._v(
+              "\n                " +
+                _vm._s(_vm.$page["props"]["site"]["title"]) +
+                "\n            "
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "p",
+          {
+            staticClass:
+              "text-center\tmb-4 mt-4 text-lg text-gray-500 sm:mt-3 sm:mb-4"
+          },
+          [
+            _vm._v(
+              "\n                I’d love to hear from you! Send me a message using the forms below, or email me.\n            "
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _vm.$page["props"]["topics"].length
+          ? _c(
+              "ul",
+              _vm._l(_vm.$page["props"]["topics"], function(topic) {
+                return _c(
+                  "li",
+                  { staticClass: "group" },
+                  [
+                    _c(
+                      "inertia-link",
+                      {
+                        attrs: {
+                          href: _vm.route("site.form.show", {
+                            site: _vm.site.uuid,
+                            form: topic.uuid
+                          })
+                        }
+                      },
                       [
                         _c(
-                          "inertia-link",
+                          "div",
                           {
-                            attrs: {
-                              href: _vm.route("site.form.show", {
-                                site: _vm.site.uuid,
-                                form: topic.uuid
-                              })
-                            }
+                            staticClass:
+                              "mb-5 bg-white shadow sm:rounded-lg sm:mb-4"
                           },
                           [
-                            _c(
-                              "div",
-                              {
-                                staticClass:
-                                  "mb-5 bg-white shadow sm:rounded-lg sm:mb-4"
-                              },
-                              [
-                                _c("div", { staticClass: "px-4 py-5 sm:p-6" }, [
+                            _c("div", { staticClass: "px-4 py-5 sm:p-6" }, [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "sm:flex sm:items-start sm:justify-between"
+                                },
+                                [
+                                  _c("div", [
+                                    _c(
+                                      "h3",
+                                      {
+                                        staticClass:
+                                          "text-lg leading-6 font-medium text-gray-900"
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                            " +
+                                            _vm._s(topic.text) +
+                                            "\n                                        "
+                                        )
+                                      ]
+                                    )
+                                  ]),
+                                  _vm._v(" "),
                                   _c(
                                     "div",
                                     {
                                       staticClass:
-                                        "sm:flex sm:items-start sm:justify-between"
+                                        "mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center"
                                     },
                                     [
-                                      _c("div", [
-                                        _c(
-                                          "h3",
-                                          {
-                                            staticClass:
-                                              "text-lg leading-6 font-medium text-gray-900"
-                                          },
-                                          [
-                                            _vm._v(
-                                              "\n                                                    " +
-                                                _vm._s(topic.text) +
-                                                "\n                                                "
-                                            )
-                                          ]
-                                        )
-                                      ]),
-                                      _vm._v(" "),
                                       _c(
-                                        "div",
+                                        "button",
                                         {
                                           staticClass:
-                                            "mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center"
+                                            "inline-flex items-center px-4 py-2 border border-transparent shadow-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm",
+                                          attrs: { type: "button" }
                                         },
                                         [
-                                          _c(
-                                            "button",
-                                            {
-                                              staticClass:
-                                                "inline-flex items-center px-4 py-2 border border-transparent shadow-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm",
-                                              attrs: { type: "button" }
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                                                    Go\n                                                "
-                                              )
-                                            ]
+                                          _vm._v(
+                                            "\n                                            Go\n                                        "
                                           )
                                         ]
                                       )
                                     ]
                                   )
-                                ])
-                              ]
-                            )
+                                ]
+                              )
+                            ])
                           ]
                         )
-                      ],
-                      1
+                      ]
                     )
-                  }),
-                  0
+                  ],
+                  1
                 )
-              : _c("div", {
-                  staticClass: "mt-2 max-w-xl text-sm text-gray-500"
-                })
-          ])
-        ])
+              }),
+              0
+            )
+          : _c("div", { staticClass: "mt-2 max-w-xl text-sm text-gray-500" })
       ]
     )
   ])
@@ -42091,21 +41927,17 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "lg:absolute lg:inset-0" }, [
-      _c(
-        "div",
-        { staticClass: "lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2" },
-        [
-          _c("img", {
-            staticClass: "h-56 w-full object-cover lg:absolute lg:h-full",
-            attrs: {
-              src:
-                "https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-1.2.1&ixqx=5XGNHivJgT&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80",
-              alt: ""
-            }
-          })
-        ]
-      )
+    return _c("div", { staticClass: "lg:fixed" }, [
+      _c("div", { staticClass: "lg:fixed w-full" }, [
+        _c("img", {
+          staticClass: "h-56 w-full object-cover lg:fixed lg:h-full",
+          attrs: {
+            src:
+              "https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-1.2.1&ixqx=5XGNHivJgT&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1567&q=80",
+            alt: ""
+          }
+        })
+      ])
     ])
   }
 ]
