@@ -7506,6 +7506,380 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -7532,10 +7906,26 @@ __webpack_require__.r(__webpack_exports__);
     return {
       isOpen: false,
       addQuestion: false,
+      createLink: false,
+      openLink: false,
       form: this.$inertia.form({
         text: '',
         question: '',
         topic_id: 0,
+        site_id: this.site.id
+      }),
+      deleteLink: this.$inertia.form({
+        link_id: 0,
+        site_id: this.site.id
+      }),
+      updateLink: this.$inertia.form({
+        url: '',
+        link_id: 0,
+        site_id: this.site.id
+      }),
+      addLink: this.$inertia.form({
+        url: '',
+        title: '',
         site_id: this.site.id
       })
     };
@@ -7627,6 +8017,236 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Form.vue"
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Sites/FormEdit.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Sites/FormEdit.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
+/* harmony import */ var _Jetstream_Label__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/Jetstream/Label */ "./resources/js/Jetstream/Label.vue");
+/* harmony import */ var _Jetstream_Input__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/Jetstream/Input */ "./resources/js/Jetstream/Input.vue");
+/* harmony import */ var _Jetstream_SectionBorder__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/Jetstream/SectionBorder */ "./resources/js/Jetstream/SectionBorder.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__.default,
+    JetLabel: _Jetstream_Label__WEBPACK_IMPORTED_MODULE_1__.default,
+    JetInput: _Jetstream_Input__WEBPACK_IMPORTED_MODULE_2__.default,
+    SectionBorder: _Jetstream_SectionBorder__WEBPACK_IMPORTED_MODULE_3__.default
+  },
+  name: "FormEdit.vue",
+  props: ['site'],
+  data: function data() {
+    return {
+      // site_id: this.site.id,
+      updateQuestion: this.$inertia.form({
+        question: '',
+        question_id: 0,
+        topic_id: 0,
+        site_id: this.site.id
+      }),
+      addQuestion: this.$inertia.form({
+        question: '',
+        topic_id: 0,
+        site_id: this.site.id
+      }),
+      deleteQuestion: this.$inertia.form({
+        question_id: 0,
+        topic_id: 0,
+        site_id: this.site.id
+      })
+    };
+  }
 });
 
 /***/ }),
@@ -7937,6 +8557,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
+/* harmony import */ var _Jetstream_Button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/Jetstream/Button */ "./resources/js/Jetstream/Button.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -8063,11 +8716,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['site'],
   name: "Show",
   components: {
+    Button: _Jetstream_Button__WEBPACK_IMPORTED_MODULE_1__.default,
     AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__.default
+  },
+  data: function data() {
+    return {
+      openLink: this.$inertia.form({
+        url: ''
+      })
+    };
   }
 });
 
@@ -30171,6 +30833,45 @@ component.options.__file = "resources/js/Pages/Sites/Form.vue"
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Sites/FormEdit.vue":
+/*!***********************************************!*\
+  !*** ./resources/js/Pages/Sites/FormEdit.vue ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _FormEdit_vue_vue_type_template_id_0906a9cc_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormEdit.vue?vue&type=template&id=0906a9cc&scoped=true& */ "./resources/js/Pages/Sites/FormEdit.vue?vue&type=template&id=0906a9cc&scoped=true&");
+/* harmony import */ var _FormEdit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormEdit.vue?vue&type=script&lang=js& */ "./resources/js/Pages/Sites/FormEdit.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _FormEdit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _FormEdit_vue_vue_type_template_id_0906a9cc_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _FormEdit_vue_vue_type_template_id_0906a9cc_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "0906a9cc",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/Sites/FormEdit.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Sites/Index.vue":
 /*!********************************************!*\
   !*** ./resources/js/Pages/Sites/Index.vue ***!
@@ -31299,6 +32000,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Sites/FormEdit.vue?vue&type=script&lang=js&":
+/*!************************************************************************!*\
+  !*** ./resources/js/Pages/Sites/FormEdit.vue?vue&type=script&lang=js& ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormEdit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./FormEdit.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Sites/FormEdit.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormEdit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Sites/Index.vue?vue&type=script&lang=js&":
 /*!*********************************************************************!*\
   !*** ./resources/js/Pages/Sites/Index.vue?vue&type=script&lang=js& ***!
@@ -32352,6 +33069,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Form_vue_vue_type_template_id_62bf4c20_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Form_vue_vue_type_template_id_62bf4c20_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Form.vue?vue&type=template&id=62bf4c20&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Sites/Form.vue?vue&type=template&id=62bf4c20&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Sites/FormEdit.vue?vue&type=template&id=0906a9cc&scoped=true&":
+/*!******************************************************************************************!*\
+  !*** ./resources/js/Pages/Sites/FormEdit.vue?vue&type=template&id=0906a9cc&scoped=true& ***!
+  \******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormEdit_vue_vue_type_template_id_0906a9cc_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormEdit_vue_vue_type_template_id_0906a9cc_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormEdit_vue_vue_type_template_id_0906a9cc_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./FormEdit.vue?vue&type=template&id=0906a9cc&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Sites/FormEdit.vue?vue&type=template&id=0906a9cc&scoped=true&");
 
 
 /***/ }),
@@ -40395,7 +41129,7 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\n                                Add a form\n                            "
+                        "\n                                Add a link or form\n                            "
                       )
                     ]
                   ),
@@ -40406,7 +41140,7 @@ var render = function() {
                     [
                       _c("p", [
                         _vm._v(
-                          "\n                                    Forms are how customers will interact with your page and how you'll generate leads.\n                                "
+                          "\n                                    These are how customers will interact with your page and how you'll generate leads.\n                                "
                         )
                       ])
                     ]
@@ -40417,6 +41151,25 @@ var render = function() {
                       "div",
                       { staticClass: "relative inline-block text-left" },
                       [
+                        _c(
+                          "button",
+                          {
+                            staticClass:
+                              "inline-flex items-center justify-center px-4 py-2 mr-4 border border-transparent font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm",
+                            attrs: { type: "button" },
+                            on: {
+                              click: function($event) {
+                                _vm.createLink = !_vm.createLink
+                              }
+                            }
+                          },
+                          [
+                            _vm._v(
+                              "\n                                        New Link\n                                    "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
                         _c(
                           "button",
                           {
@@ -40442,11 +41195,467 @@ var render = function() {
                             attrs: {
                               "enter-active-class":
                                 "transition ease-out duration-300",
-                              "enter-from-class": "opacity-0",
+                              "enter-class": "opacity-0",
                               "enter-to-class": "opacity-100",
                               "leave-active-class":
                                 "transition ease-in duration-200",
-                              "leave-from-class": "opacity-100",
+                              "leave-class": "opacity-100",
+                              "leave-to-class": "opacity-0"
+                            }
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                directives: [
+                                  {
+                                    name: "show",
+                                    rawName: "v-show",
+                                    value: _vm.createLink,
+                                    expression: "createLink"
+                                  }
+                                ],
+                                staticClass:
+                                  "fixed z-10 inset-0 overflow-y-auto "
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass:
+                                          "fixed inset-0 transition-opacity",
+                                        attrs: { "aria-hidden": "true" }
+                                      },
+                                      [
+                                        _c("div", {
+                                          staticClass:
+                                            "absolute inset-0 bg-gray-500 opacity-75"
+                                        })
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "span",
+                                      {
+                                        staticClass:
+                                          "hidden sm:inline-block sm:align-middle sm:h-screen",
+                                        attrs: { "aria-hidden": "true" }
+                                      },
+                                      [_vm._v("​")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "transition",
+                                      {
+                                        attrs: {
+                                          "enter-active-class":
+                                            "transition ease-out duration-300",
+                                          "enter-class":
+                                            "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95",
+                                          "enter-to-class":
+                                            "opacity-100 translate-y-0 sm:scale-100",
+                                          "leave-active-class":
+                                            "transition ease-in duration-200",
+                                          "leave-class":
+                                            "opacity-100 translate-y-0 sm:scale-100",
+                                          "leave-to-class":
+                                            "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                                        }
+                                      },
+                                      [
+                                        _vm.createLink
+                                          ? _c(
+                                              "div",
+                                              {
+                                                staticClass:
+                                                  "inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6",
+                                                attrs: {
+                                                  role: "dialog",
+                                                  "aria-modal": "true",
+                                                  "aria-labelledby":
+                                                    "modal-headline"
+                                                }
+                                              },
+                                              [
+                                                _c("div", [
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass:
+                                                        "mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-purple-100"
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "svg",
+                                                        {
+                                                          staticClass:
+                                                            "h-6 w-6 text-purple-600",
+                                                          attrs: {
+                                                            xmlns:
+                                                              "http://www.w3.org/2000/svg",
+                                                            fill: "none",
+                                                            viewBox:
+                                                              "0 0 24 24",
+                                                            stroke:
+                                                              "currentColor",
+                                                            "aria-hidden":
+                                                              "true"
+                                                          }
+                                                        },
+                                                        [
+                                                          _c("path", {
+                                                            attrs: {
+                                                              "stroke-linecap":
+                                                                "round",
+                                                              "stroke-linejoin":
+                                                                "round",
+                                                              "stroke-width":
+                                                                "2",
+                                                              d:
+                                                                "M12 6v6m0 0v6m0-6h6m-6 0H6"
+                                                            }
+                                                          })
+                                                        ]
+                                                      )
+                                                    ]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass:
+                                                        "mt-3 text-center sm:mt-5"
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "h3",
+                                                        {
+                                                          staticClass:
+                                                            "text-lg leading-6 font-medium text-gray-900"
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            "\n                                                                    Create a New Link\n                                                                "
+                                                          )
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "div",
+                                                        { staticClass: "mt-2" },
+                                                        [
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "col-span-6 sm:col-span-4"
+                                                            },
+                                                            [
+                                                              _c("jet-label", {
+                                                                attrs: {
+                                                                  for: "title",
+                                                                  value:
+                                                                    "Description"
+                                                                }
+                                                              }),
+                                                              _vm._v(" "),
+                                                              _c("jet-input", {
+                                                                staticClass:
+                                                                  "mt-1 block w-full",
+                                                                attrs: {
+                                                                  type: "text",
+                                                                  placeholder:
+                                                                    "eg: Google"
+                                                                },
+                                                                model: {
+                                                                  value:
+                                                                    _vm.addLink
+                                                                      .title,
+                                                                  callback: function(
+                                                                    $$v
+                                                                  ) {
+                                                                    _vm.$set(
+                                                                      _vm.addLink,
+                                                                      "title",
+                                                                      $$v
+                                                                    )
+                                                                  },
+                                                                  expression:
+                                                                    "addLink.title"
+                                                                }
+                                                              }),
+                                                              _vm._v(" "),
+                                                              _c("jet-label", {
+                                                                staticClass:
+                                                                  "mt-2",
+                                                                attrs: {
+                                                                  for: "title",
+                                                                  value: "URL"
+                                                                }
+                                                              }),
+                                                              _vm._v(" "),
+                                                              _c("jet-input", {
+                                                                staticClass:
+                                                                  "mt-1 block w-full",
+                                                                attrs: {
+                                                                  type: "text",
+                                                                  placeholder:
+                                                                    "eg: www.google.com"
+                                                                },
+                                                                model: {
+                                                                  value:
+                                                                    _vm.addLink
+                                                                      .url,
+                                                                  callback: function(
+                                                                    $$v
+                                                                  ) {
+                                                                    _vm.$set(
+                                                                      _vm.addLink,
+                                                                      "url",
+                                                                      $$v
+                                                                    )
+                                                                  },
+                                                                  expression:
+                                                                    "addLink.url"
+                                                                }
+                                                              })
+                                                            ],
+                                                            1
+                                                          )
+                                                        ]
+                                                      )
+                                                    ]
+                                                  )
+                                                ]),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "form",
+                                                  {
+                                                    on: {
+                                                      submit: function($event) {
+                                                        $event.preventDefault()
+                                                        return _vm.addLink.post(
+                                                          "/site/create-link"
+                                                        )
+                                                      }
+                                                    }
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "mt-5 sm:mt-6 sm:grid sm:grid-cols-2 sm:gap-3 sm:grid-flow-row-dense"
+                                                      },
+                                                      [
+                                                        _vm.createLink
+                                                          .processing
+                                                          ? [
+                                                              _c(
+                                                                "button",
+                                                                {
+                                                                  staticClass:
+                                                                    "w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm",
+                                                                  attrs: {
+                                                                    type:
+                                                                      "submit"
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _c(
+                                                                    "svg",
+                                                                    {
+                                                                      staticClass:
+                                                                        "animate-spin -ml-1 mr-3 h-5 w-5 text-white",
+                                                                      attrs: {
+                                                                        xmlns:
+                                                                          "http://www.w3.org/2000/svg",
+                                                                        fill:
+                                                                          "none",
+                                                                        viewBox:
+                                                                          "0 0 24 24"
+                                                                      }
+                                                                    },
+                                                                    [
+                                                                      _c(
+                                                                        "circle",
+                                                                        {
+                                                                          staticClass:
+                                                                            "opacity-25",
+                                                                          attrs: {
+                                                                            cx:
+                                                                              "12",
+                                                                            cy:
+                                                                              "12",
+                                                                            r:
+                                                                              "10",
+                                                                            stroke:
+                                                                              "currentColor",
+                                                                            "stroke-width":
+                                                                              "4"
+                                                                          }
+                                                                        }
+                                                                      ),
+                                                                      _vm._v(
+                                                                        " "
+                                                                      ),
+                                                                      _c(
+                                                                        "path",
+                                                                        {
+                                                                          staticClass:
+                                                                            "opacity-75",
+                                                                          attrs: {
+                                                                            fill:
+                                                                              "currentColor",
+                                                                            d:
+                                                                              "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                                                                          }
+                                                                        }
+                                                                      )
+                                                                    ]
+                                                                  ),
+                                                                  _vm._v(
+                                                                    "\n                                                                        Create\n                                                                    "
+                                                                  )
+                                                                ]
+                                                              )
+                                                            ]
+                                                          : _vm.createLink
+                                                              .recentlySuccessful
+                                                          ? [
+                                                              _c(
+                                                                "button",
+                                                                {
+                                                                  staticClass:
+                                                                    "w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm",
+                                                                  attrs: {
+                                                                    type:
+                                                                      "submit"
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _c(
+                                                                    "svg",
+                                                                    {
+                                                                      staticClass:
+                                                                        "-ml-1 mr-2 h-5 w-5",
+                                                                      attrs: {
+                                                                        xmlns:
+                                                                          "http://www.w3.org/2000/svg",
+                                                                        viewBox:
+                                                                          "0 0 20 20",
+                                                                        fill:
+                                                                          "currentColor",
+                                                                        "aria-hidden":
+                                                                          "true"
+                                                                      }
+                                                                    },
+                                                                    [
+                                                                      _c(
+                                                                        "path",
+                                                                        {
+                                                                          attrs: {
+                                                                            "fill-rule":
+                                                                              "evenodd",
+                                                                            d:
+                                                                              "M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z",
+                                                                            "clip-rule":
+                                                                              "evenodd"
+                                                                          }
+                                                                        }
+                                                                      )
+                                                                    ]
+                                                                  ),
+                                                                  _vm._v(
+                                                                    "\n                                                                        Created\n                                                                    "
+                                                                  )
+                                                                ]
+                                                              )
+                                                            ]
+                                                          : [
+                                                              _c(
+                                                                "button",
+                                                                {
+                                                                  staticClass:
+                                                                    "w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm",
+                                                                  attrs: {
+                                                                    type:
+                                                                      "submit"
+                                                                  },
+                                                                  on: {
+                                                                    click: function(
+                                                                      $event
+                                                                    ) {
+                                                                      _vm.createLink = !_vm.createLink
+                                                                    }
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    "\n                                                                        Create\n                                                                    "
+                                                                  )
+                                                                ]
+                                                              )
+                                                            ],
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "button",
+                                                          {
+                                                            staticClass:
+                                                              "mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:col-start-1 sm:text-sm",
+                                                            attrs: {
+                                                              type: "button"
+                                                            },
+                                                            on: {
+                                                              click: function(
+                                                                $event
+                                                              ) {
+                                                                _vm.createLink = !_vm.createLink
+                                                              }
+                                                            }
+                                                          },
+                                                          [
+                                                            _vm._v(
+                                                              "\n                                                                    Cancel\n                                                                "
+                                                            )
+                                                          ]
+                                                        )
+                                                      ],
+                                                      2
+                                                    )
+                                                  ]
+                                                )
+                                              ]
+                                            )
+                                          : _vm._e()
+                                      ]
+                                    )
+                                  ],
+                                  1
+                                )
+                              ]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "transition",
+                          {
+                            attrs: {
+                              "enter-active-class":
+                                "transition ease-out duration-300",
+                              "enter-class": "opacity-0",
+                              "enter-to-class": "opacity-100",
+                              "leave-active-class":
+                                "transition ease-in duration-200",
+                              "leave-class": "opacity-100",
                               "leave-to-class": "opacity-0"
                             }
                           },
@@ -40504,13 +41713,13 @@ var render = function() {
                                         attrs: {
                                           "enter-active-class":
                                             "transition ease-out duration-300",
-                                          "enter-from-class":
+                                          "enter-class":
                                             "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95",
                                           "enter-to-class":
                                             "opacity-100 translate-y-0 sm:scale-100",
                                           "leave-active-class":
                                             "transition ease-in duration-200",
-                                          "leave-from-class":
+                                          "leave-class":
                                             "opacity-100 translate-y-0 sm:scale-100",
                                           "leave-to-class":
                                             "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
@@ -40800,6 +42009,13 @@ var render = function() {
                                                                   attrs: {
                                                                     type:
                                                                       "submit"
+                                                                  },
+                                                                  on: {
+                                                                    click: function(
+                                                                      $event
+                                                                    ) {
+                                                                      _vm.isOpen = !_vm.isOpen
+                                                                    }
                                                                   }
                                                                 },
                                                                 [
@@ -40872,11 +42088,560 @@ var render = function() {
                 )
               ]),
               _vm._v(" "),
-              _c("p", { staticClass: "mt-2 max-w-4xl text-sm text-gray-500" }, [
-                _vm._v(
-                  "\n                        Coming soon!\n                    "
-                )
-              ]),
+              _vm.$page["props"]["links"].length
+                ? _c(
+                    "ul",
+                    {
+                      staticClass:
+                        "space-y-12 sm:grid sm:grid-cols-1 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-1 lg:gap-x-8"
+                    },
+                    _vm._l(_vm.$page["props"]["links"], function(link, index) {
+                      return _c("li", { staticClass: "group" }, [
+                        _c("div", { staticClass: "bg-gray-50 sm:rounded-lg" }, [
+                          _c("div", { staticClass: "px-4 py-5 sm:p-6" }, [
+                            _c(
+                              "h3",
+                              {
+                                staticClass:
+                                  "text-lg leading-6 font-medium text-gray-900"
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                        " +
+                                    _vm._s(link.title) +
+                                    "\n                                    "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "mt-2 max-w-xl text-sm text-gray-500"
+                              },
+                              [
+                                _c("p", [
+                                  _vm._v(
+                                    "\n                                            " +
+                                      _vm._s(link.url) +
+                                      "\n                                        "
+                                  )
+                                ])
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "mt-5 flex justify-between" },
+                              [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass:
+                                      "inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm",
+                                    attrs: { type: "button" },
+                                    on: {
+                                      click: function($event) {
+                                        _vm.openLink = !_vm.openLink
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                            Edit link\n                                        "
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "transition",
+                                  {
+                                    attrs: {
+                                      "enter-active-class":
+                                        "transition ease-out duration-300",
+                                      "enter-class": "opacity-0",
+                                      "enter-to-class": "opacity-100",
+                                      "leave-active-class":
+                                        "transition ease-in duration-200",
+                                      "leave-class": "opacity-100",
+                                      "leave-to-class": "opacity-0"
+                                    }
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      {
+                                        directives: [
+                                          {
+                                            name: "show",
+                                            rawName: "v-show",
+                                            value: _vm.openLink,
+                                            expression: "openLink"
+                                          }
+                                        ],
+                                        staticClass:
+                                          "fixed z-10 inset-0 overflow-y-auto "
+                                      },
+                                      [
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass:
+                                              "flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
+                                          },
+                                          [
+                                            _c(
+                                              "div",
+                                              {
+                                                staticClass:
+                                                  "fixed inset-0 transition-opacity",
+                                                attrs: { "aria-hidden": "true" }
+                                              },
+                                              [
+                                                _c("div", {
+                                                  staticClass:
+                                                    "absolute inset-0 bg-gray-500 opacity-75"
+                                                })
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "span",
+                                              {
+                                                staticClass:
+                                                  "hidden sm:inline-block sm:align-middle sm:h-screen",
+                                                attrs: { "aria-hidden": "true" }
+                                              },
+                                              [_vm._v("​")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "transition",
+                                              {
+                                                attrs: {
+                                                  "enter-active-class":
+                                                    "transition ease-out duration-300",
+                                                  "enter-class":
+                                                    "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95",
+                                                  "enter-to-class":
+                                                    "opacity-100 translate-y-0 sm:scale-100",
+                                                  "leave-active-class":
+                                                    "transition ease-in duration-200",
+                                                  "leave-class":
+                                                    "opacity-100 translate-y-0 sm:scale-100",
+                                                  "leave-to-class":
+                                                    "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                                                }
+                                              },
+                                              [
+                                                _vm.openLink
+                                                  ? _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6",
+                                                        attrs: {
+                                                          role: "dialog",
+                                                          "aria-modal": "true",
+                                                          "aria-labelledby":
+                                                            "modal-headline"
+                                                        }
+                                                      },
+                                                      [
+                                                        _c("div", [
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-purple-100"
+                                                            },
+                                                            [
+                                                              _c(
+                                                                "svg",
+                                                                {
+                                                                  staticClass:
+                                                                    "h-6 w-6 text-purple-600",
+                                                                  attrs: {
+                                                                    xmlns:
+                                                                      "http://www.w3.org/2000/svg",
+                                                                    fill:
+                                                                      "none",
+                                                                    viewBox:
+                                                                      "0 0 24 24",
+                                                                    stroke:
+                                                                      "currentColor"
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _c("path", {
+                                                                    attrs: {
+                                                                      "stroke-linecap":
+                                                                        "round",
+                                                                      "stroke-linejoin":
+                                                                        "round",
+                                                                      "stroke-width":
+                                                                        "2",
+                                                                      d:
+                                                                        "M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                                                                    }
+                                                                  })
+                                                                ]
+                                                              )
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "mt-3 text-center sm:mt-5"
+                                                            },
+                                                            [
+                                                              _c(
+                                                                "h3",
+                                                                {
+                                                                  staticClass:
+                                                                    "text-lg leading-6 font-medium text-gray-900"
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    "\n                                                                        " +
+                                                                      _vm._s(
+                                                                        link.title
+                                                                      ) +
+                                                                      "\n                                                                    "
+                                                                  )
+                                                                ]
+                                                              ),
+                                                              _vm._v(" "),
+                                                              _c(
+                                                                "div",
+                                                                {
+                                                                  staticClass:
+                                                                    "mt-2"
+                                                                },
+                                                                [
+                                                                  _c(
+                                                                    "div",
+                                                                    {
+                                                                      staticClass:
+                                                                        "col-span-6 sm:col-span-4"
+                                                                    },
+                                                                    [
+                                                                      _c(
+                                                                        "jet-label",
+                                                                        {
+                                                                          attrs: {
+                                                                            for:
+                                                                              "title",
+                                                                            value:
+                                                                              "URL"
+                                                                          }
+                                                                        }
+                                                                      ),
+                                                                      _vm._v(
+                                                                        " "
+                                                                      ),
+                                                                      _c(
+                                                                        "jet-input",
+                                                                        {
+                                                                          staticClass:
+                                                                            "mt-1 block w-full",
+                                                                          attrs: {
+                                                                            type:
+                                                                              "text",
+                                                                            value:
+                                                                              link.url
+                                                                          },
+                                                                          on: {
+                                                                            input: function(
+                                                                              $event
+                                                                            ) {
+                                                                              _vm.updateLink.url = $event
+                                                                              _vm.updateLink.link_id =
+                                                                                link.id
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      )
+                                                                    ],
+                                                                    1
+                                                                  )
+                                                                ]
+                                                              )
+                                                            ]
+                                                          )
+                                                        ]),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "form",
+                                                          {
+                                                            on: {
+                                                              submit: function(
+                                                                $event
+                                                              ) {
+                                                                $event.preventDefault()
+                                                                return _vm.updateLink.post(
+                                                                  "/site/update-link"
+                                                                )
+                                                              }
+                                                            }
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "div",
+                                                              {
+                                                                staticClass:
+                                                                  "mt-5 sm:mt-6 sm:grid sm:grid-cols-2 sm:gap-3 sm:grid-flow-row-dense"
+                                                              },
+                                                              [
+                                                                _vm.form
+                                                                  .processing
+                                                                  ? [
+                                                                      _c(
+                                                                        "button",
+                                                                        {
+                                                                          staticClass:
+                                                                            "w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm",
+                                                                          attrs: {
+                                                                            type:
+                                                                              "submit"
+                                                                          }
+                                                                        },
+                                                                        [
+                                                                          _c(
+                                                                            "svg",
+                                                                            {
+                                                                              staticClass:
+                                                                                "animate-spin -ml-1 mr-3 h-5 w-5 text-white",
+                                                                              attrs: {
+                                                                                xmlns:
+                                                                                  "http://www.w3.org/2000/svg",
+                                                                                fill:
+                                                                                  "none",
+                                                                                viewBox:
+                                                                                  "0 0 24 24"
+                                                                              }
+                                                                            },
+                                                                            [
+                                                                              _c(
+                                                                                "circle",
+                                                                                {
+                                                                                  staticClass:
+                                                                                    "opacity-25",
+                                                                                  attrs: {
+                                                                                    cx:
+                                                                                      "12",
+                                                                                    cy:
+                                                                                      "12",
+                                                                                    r:
+                                                                                      "10",
+                                                                                    stroke:
+                                                                                      "currentColor",
+                                                                                    "stroke-width":
+                                                                                      "4"
+                                                                                  }
+                                                                                }
+                                                                              ),
+                                                                              _vm._v(
+                                                                                " "
+                                                                              ),
+                                                                              _c(
+                                                                                "path",
+                                                                                {
+                                                                                  staticClass:
+                                                                                    "opacity-75",
+                                                                                  attrs: {
+                                                                                    fill:
+                                                                                      "currentColor",
+                                                                                    d:
+                                                                                      "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                                                                                  }
+                                                                                }
+                                                                              )
+                                                                            ]
+                                                                          ),
+                                                                          _vm._v(
+                                                                            "\n                                                                            Updating\n                                                                        "
+                                                                          )
+                                                                        ]
+                                                                      )
+                                                                    ]
+                                                                  : _vm.form
+                                                                      .recentlySuccessful
+                                                                  ? [
+                                                                      _c(
+                                                                        "button",
+                                                                        {
+                                                                          staticClass:
+                                                                            "w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm",
+                                                                          attrs: {
+                                                                            type:
+                                                                              "submit"
+                                                                          }
+                                                                        },
+                                                                        [
+                                                                          _c(
+                                                                            "svg",
+                                                                            {
+                                                                              staticClass:
+                                                                                "-ml-1 mr-2 h-5 w-5",
+                                                                              attrs: {
+                                                                                xmlns:
+                                                                                  "http://www.w3.org/2000/svg",
+                                                                                viewBox:
+                                                                                  "0 0 20 20",
+                                                                                fill:
+                                                                                  "currentColor",
+                                                                                "aria-hidden":
+                                                                                  "true"
+                                                                              }
+                                                                            },
+                                                                            [
+                                                                              _c(
+                                                                                "path",
+                                                                                {
+                                                                                  attrs: {
+                                                                                    "fill-rule":
+                                                                                      "evenodd",
+                                                                                    d:
+                                                                                      "M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z",
+                                                                                    "clip-rule":
+                                                                                      "evenodd"
+                                                                                  }
+                                                                                }
+                                                                              )
+                                                                            ]
+                                                                          ),
+                                                                          _vm._v(
+                                                                            "\n                                                                            Updated\n                                                                        "
+                                                                          )
+                                                                        ]
+                                                                      )
+                                                                    ]
+                                                                  : [
+                                                                      _c(
+                                                                        "button",
+                                                                        {
+                                                                          staticClass:
+                                                                            "w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm",
+                                                                          attrs: {
+                                                                            type:
+                                                                              "submit"
+                                                                          },
+                                                                          on: {
+                                                                            click: function(
+                                                                              $event
+                                                                            ) {
+                                                                              _vm.openLink = !_vm.openLink
+                                                                            }
+                                                                          }
+                                                                        },
+                                                                        [
+                                                                          _vm._v(
+                                                                            "\n                                                                            Update\n                                                                        "
+                                                                          )
+                                                                        ]
+                                                                      )
+                                                                    ],
+                                                                _vm._v(" "),
+                                                                _c(
+                                                                  "button",
+                                                                  {
+                                                                    staticClass:
+                                                                      "mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:col-start-1 sm:text-sm",
+                                                                    attrs: {
+                                                                      type:
+                                                                        "button"
+                                                                    },
+                                                                    on: {
+                                                                      click: function(
+                                                                        $event
+                                                                      ) {
+                                                                        _vm.openLink = !_vm.openLink
+                                                                      }
+                                                                    }
+                                                                  },
+                                                                  [
+                                                                    _vm._v(
+                                                                      "\n                                                                        Cancel\n                                                                    "
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ],
+                                                              2
+                                                            )
+                                                          ]
+                                                        )
+                                                      ]
+                                                    )
+                                                  : _vm._e()
+                                              ]
+                                            )
+                                          ],
+                                          1
+                                        )
+                                      ]
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "form",
+                                  {
+                                    on: {
+                                      submit: function($event) {
+                                        $event.preventDefault()
+                                        return _vm.deleteLink.post(
+                                          "/site/delete-link"
+                                        )
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c(
+                                      "button",
+                                      {
+                                        staticClass:
+                                          "inline-flex items-center px-4 py-2 border border-transparent shadow-sm font-medium rounded-md text-red-700 bg-red-100 hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:text-sm",
+                                        attrs: {
+                                          value: link.id,
+                                          type: "submit"
+                                        },
+                                        on: {
+                                          click: function($event) {
+                                            _vm.deleteLink.link_id =
+                                              $event.target.value
+                                          }
+                                        }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                                Delete\n                                            "
+                                        )
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ],
+                              1
+                            )
+                          ])
+                        ])
+                      ])
+                    }),
+                    0
+                  )
+                : _c(
+                    "p",
+                    { staticClass: "mt-2 max-w-4xl text-sm text-gray-500" },
+                    [
+                      _vm._v(
+                        "\n                        You haven't added any links yet. Click the create link button on the top of the page to get\n                        started!\n                    "
+                      )
+                    ]
+                  ),
               _vm._v(" "),
               _c("section-border"),
               _vm._v(" "),
@@ -40924,7 +42689,30 @@ var render = function() {
                             ),
                             _vm._v(" "),
                             _vm.$page["props"]["questions"][index]["questions"]
-                              .length
+                              .length == 1
+                              ? _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "mt-2 max-w-xl text-sm text-gray-500"
+                                  },
+                                  [
+                                    _c("p", [
+                                      _vm._v(
+                                        "\n                                            " +
+                                          _vm._s(
+                                            _vm.$page["props"]["questions"][
+                                              index
+                                            ]["questions"].length + " question"
+                                          ) +
+                                          "\n                                        "
+                                      )
+                                    ])
+                                  ]
+                                )
+                              : _vm.$page["props"]["questions"][index][
+                                  "questions"
+                                ].length > 1
                               ? _c(
                                   "div",
                                   {
@@ -40965,15 +42753,29 @@ var render = function() {
                               { staticClass: "mt-5 flex justify-between" },
                               [
                                 _c(
-                                  "button",
+                                  "inertia-link",
                                   {
-                                    staticClass:
-                                      "inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm",
-                                    attrs: { type: "button" }
+                                    attrs: {
+                                      href: _vm.route("site.form.edit", {
+                                        site:
+                                          _vm.$page["props"]["site"]["uuid"],
+                                        form: topic.uuid
+                                      })
+                                    }
                                   },
                                   [
-                                    _vm._v(
-                                      "\n                                            Edit form\n                                        "
+                                    _c(
+                                      "button",
+                                      {
+                                        staticClass:
+                                          "inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm",
+                                        attrs: { type: "button" }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                                Edit form\n                                            "
+                                        )
+                                      ]
                                     )
                                   ]
                                 ),
@@ -41015,7 +42817,8 @@ var render = function() {
                                     )
                                   ]
                                 )
-                              ]
+                              ],
+                              1
                             )
                           ])
                         ])
@@ -41192,6 +42995,281 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Sites/FormEdit.vue?vue&type=template&id=0906a9cc&scoped=true&":
+/*!*********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Sites/FormEdit.vue?vue&type=template&id=0906a9cc&scoped=true& ***!
+  \*********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "app-layout",
+    {
+      scopedSlots: _vm._u([
+        {
+          key: "header",
+          fn: function() {
+            return [
+              _c(
+                "div",
+                { staticClass: "lg:flex lg:items-center lg:justify-between" },
+                [
+                  _c("div", { staticClass: "flex-1 min-w-0" }, [
+                    _c(
+                      "h2",
+                      {
+                        staticClass:
+                          "font-semibold text-xl text-gray-800 leading-tight sm:truncate"
+                      },
+                      [
+                        _vm._v(
+                          "\n                    " +
+                            _vm._s(_vm.$page["props"]["topic"]["text"]) +
+                            "\n                "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "mt-5 flex lg:mt-0 lg:ml-4" })
+                ]
+              )
+            ]
+          },
+          proxy: true
+        }
+      ])
+    },
+    [
+      _vm._v(" "),
+      _c("div", [
+        _c("div", { staticClass: "max-w-7xl mx-auto py-10 sm:px-6 lg:px-8" }, [
+          _c(
+            "div",
+            [
+              _c("div", { staticClass: "pb-5" }, [
+                _c(
+                  "h3",
+                  {
+                    staticClass: "text-lg leading-6 font-medium text-gray-900"
+                  },
+                  [
+                    _vm._v(
+                      "\n                        Questions\n                    "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  { staticClass: "max-w-4xl mt-4 text-sm text-gray-500" },
+                  [
+                    _vm._v(
+                      "Note: you must hit enter after typing to save an\n                        edit"
+                    )
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "bg-white shadow sm:rounded-lg " }, [
+                _c("div", { staticClass: "px-4 py-5 sm:p-6" }, [
+                  _c(
+                    "div",
+                    { staticClass: "flex justify-between items-center" },
+                    [
+                      _c("jet-input", {
+                        staticClass: "mt-1 block w-full mr-10",
+                        attrs: {
+                          id: "create",
+                          type: "text",
+                          placeholder: "New Question"
+                        },
+                        model: {
+                          value: _vm.addQuestion.question,
+                          callback: function($$v) {
+                            _vm.$set(_vm.addQuestion, "question", $$v)
+                          },
+                          expression: "addQuestion.question"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "form",
+                        {
+                          on: {
+                            submit: function($event) {
+                              $event.preventDefault()
+                              return _vm.addQuestion.post(
+                                "/site/edit/new-question"
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c(
+                            "button",
+                            {
+                              staticClass:
+                                "inline-flex items-center justify-center px-4 py-2 border border-transparent font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm",
+                              attrs: { type: "submit" },
+                              on: {
+                                click: function($event) {
+                                  _vm.addQuestion.topic_id =
+                                    _vm.$page["props"]["topic"]["id"]
+                                }
+                              }
+                            },
+                            [
+                              _vm._v(
+                                "\n                                    Add\n                                "
+                              )
+                            ]
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("section-border"),
+              _vm._v(" "),
+              _vm.$page["props"]["questions"].length
+                ? _c(
+                    "ul",
+                    {
+                      staticClass:
+                        "space-y-12 sm:grid sm:grid-cols-1 sm:gap-x-6 sm:gap-y-6 sm:space-y-0 lg:grid-cols-1 lg:gap-x-8"
+                    },
+                    _vm._l(_vm.$page["props"]["questions"], function(
+                      question,
+                      index
+                    ) {
+                      return _c("li", { staticClass: "group" }, [
+                        _c(
+                          "div",
+                          { staticClass: "bg-white shadow sm:rounded-lg" },
+                          [
+                            _c("div", { staticClass: "px-4 py-5 sm:p-6" }, [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "flex justify-between items-center"
+                                },
+                                [
+                                  _c(
+                                    "form",
+                                    {
+                                      staticClass: "block w-full mr-10",
+                                      on: {
+                                        submit: function($event) {
+                                          $event.preventDefault()
+                                          return _vm.updateQuestion.post(
+                                            "/site/edit/update-form"
+                                          )
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _c("jet-input", {
+                                        staticClass: "mt-1 block w-full",
+                                        attrs: {
+                                          type: "text",
+                                          value: question.text
+                                        },
+                                        on: {
+                                          input: function($event) {
+                                            _vm.updateQuestion.question = $event
+                                            _vm.updateQuestion.question_id =
+                                              question.id
+                                            _vm.updateQuestion.topic_id =
+                                              question.topic_id
+                                          }
+                                        }
+                                      })
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "form",
+                                    {
+                                      on: {
+                                        submit: function($event) {
+                                          $event.preventDefault()
+                                          return _vm.deleteQuestion.post(
+                                            "/site/delete-question"
+                                          )
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "button",
+                                        {
+                                          staticClass:
+                                            "inline-flex items-center px-4 py-2 border border-transparent shadow-sm font-medium rounded-md text-red-700 bg-red-100 hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:text-sm",
+                                          attrs: {
+                                            value: question.id,
+                                            type: "submit"
+                                          },
+                                          on: {
+                                            click: function($event) {
+                                              _vm.deleteQuestion.question_id =
+                                                $event.target.value
+                                              _vm.deleteQuestion.topic_id =
+                                                question.topic_id
+                                            }
+                                          }
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                                            Delete\n                                        "
+                                          )
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ])
+                          ]
+                        )
+                      ])
+                    }),
+                    0
+                  )
+                : _c("p", { staticClass: "max-w-4xl text-sm text-gray-500" }, [
+                    _vm._v(
+                      "Create your first question using the button\n                    above!"
+                    )
+                  ])
+            ],
+            1
+          )
+        ])
+      ])
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Sites/Index.vue?vue&type=template&id=6c0b1856&scoped=true&":
 /*!******************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Pages/Sites/Index.vue?vue&type=template&id=6c0b1856&scoped=true& ***!
@@ -41314,10 +43392,10 @@ var render = function() {
                       attrs: {
                         "enter-active-class":
                           "transition ease-out duration-300",
-                        "enter-from-class": "opacity-0",
+                        "enter-class": "opacity-0",
                         "enter-to-class": "opacity-100",
                         "leave-active-class": "transition ease-in duration-200",
-                        "leave-from-class": "opacity-100",
+                        "leave-class": "opacity-100",
                         "leave-to-class": "opacity-0"
                       }
                     },
@@ -41374,13 +43452,13 @@ var render = function() {
                                   attrs: {
                                     "enter-active-class":
                                       "transition ease-out duration-300",
-                                    "enter-from-class":
+                                    "enter-class":
                                       "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95",
                                     "enter-to-class":
                                       "opacity-100 translate-y-0 sm:scale-100",
                                     "leave-active-class":
                                       "transition ease-in duration-200",
-                                    "leave-from-class":
+                                    "leave-class":
                                       "opacity-100 translate-y-0 sm:scale-100",
                                     "leave-to-class":
                                       "opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
@@ -41487,6 +43565,7 @@ var render = function() {
                                                             id: "name",
                                                             type: "text",
                                                             placeholder:
+                                                              "eg: " +
                                                               _vm.$page[
                                                                 "props"
                                                               ]["name"]
@@ -41831,6 +43910,82 @@ var render = function() {
           ]
         ),
         _vm._v(" "),
+        _vm.$page["props"]["links"].length
+          ? _c(
+              "ul",
+              _vm._l(_vm.$page["props"]["links"], function(link) {
+                return _c("li", { staticClass: "group" }, [
+                  _c(
+                    "form",
+                    {
+                      on: {
+                        submit: function($event) {
+                          $event.preventDefault()
+                          return _vm.openLink.post("/site/open-link")
+                        }
+                      }
+                    },
+                    [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "focus:outline-none w-full",
+                          attrs: { type: "submit" },
+                          on: {
+                            click: function($event) {
+                              _vm.openLink.url = link.url
+                            }
+                          }
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "mb-5 bg-white shadow sm:rounded-lg sm:mb-4"
+                            },
+                            [
+                              _c("div", { staticClass: "px-4 py-5 sm:p-6" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "sm:flex sm:items-start sm:justify-between"
+                                  },
+                                  [
+                                    _c("div", [
+                                      _c(
+                                        "h3",
+                                        {
+                                          staticClass:
+                                            "text-lg leading-6 font-medium text-gray-900"
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                                                " +
+                                              _vm._s(link.title) +
+                                              "\n                                            "
+                                          )
+                                        ]
+                                      )
+                                    ]),
+                                    _vm._v(" "),
+                                    _vm._m(1, true)
+                                  ]
+                                )
+                              ])
+                            ]
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ])
+              }),
+              0
+            )
+          : _vm._e(),
+        _vm._v(" "),
         _vm.$page["props"]["topics"].length
           ? _c(
               "ul",
@@ -41939,6 +44094,33 @@ var staticRenderFns = [
         })
       ])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center"
+      },
+      [
+        _c(
+          "button",
+          {
+            staticClass:
+              "inline-flex items-center px-4 py-2 border border-transparent shadow-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm",
+            attrs: { type: "button" }
+          },
+          [
+            _vm._v(
+              "\n                                                Go\n                                            "
+            )
+          ]
+        )
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -57091,6 +59273,8 @@ var map = {
 	"./Sites/Edit.vue": "./resources/js/Pages/Sites/Edit.vue",
 	"./Sites/Form": "./resources/js/Pages/Sites/Form.vue",
 	"./Sites/Form.vue": "./resources/js/Pages/Sites/Form.vue",
+	"./Sites/FormEdit": "./resources/js/Pages/Sites/FormEdit.vue",
+	"./Sites/FormEdit.vue": "./resources/js/Pages/Sites/FormEdit.vue",
 	"./Sites/Index": "./resources/js/Pages/Sites/Index.vue",
 	"./Sites/Index.vue": "./resources/js/Pages/Sites/Index.vue",
 	"./Sites/Show": "./resources/js/Pages/Sites/Show.vue",

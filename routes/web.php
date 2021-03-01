@@ -32,6 +32,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::resource('property', 'App\Http\Controllers\Property\PropertyController');
 Route::resource('site', 'App\Http\Controllers\SiteController');
 Route::get('site/{site}/form/{form}', 'App\Http\Controllers\TopicController@show')->name('site.form.show');
+
+Route::get('site/{site}/edit/{form}', 'App\Http\Controllers\TopicController@edit')->name('site.form.edit');
 //Route::post('site.form', 'App\Http\Controllers\TopicController@store')->name('site.form.store');
 
 //Route::resource('topic', 'App\Http\Controllers\TopicController');
@@ -39,5 +41,13 @@ Route::get('site/{site}/form/{form}', 'App\Http\Controllers\TopicController@show
 Route::post('/waitlist', 'App\Http\Controllers\WaitlistController@store');
 Route::post('/site/new', 'App\Http\Controllers\SiteController@store');
 Route::post('/site/form', 'App\Http\Controllers\TopicController@store');
+Route::post('/site/edit/update-form', 'App\Http\Controllers\TopicController@update');
+Route::post('/site/edit/new-question', 'App\Http\Controllers\QuestionController@store');
 Route::post('/site/delete-form', 'App\Http\Controllers\TopicController@destroy');
-Route::post('/site/form/question', 'App\Http\Controllers\QuestionController@store');
+Route::post('/site/delete-link', 'App\Http\Controllers\LinkController@destroy');
+Route::post('/site/update-link', 'App\Http\Controllers\LinkController@update');
+Route::post('/site/create-link', 'App\Http\Controllers\LinkController@store');
+Route::post('/site/delete-question', 'App\Http\Controllers\QuestionController@destroy');
+
+Route::post('site/open-link', 'App\Http\Controllers\LinkController@show');
+//Route::post('/site/form/question', 'App\Http\Controllers\QuestionController@store');

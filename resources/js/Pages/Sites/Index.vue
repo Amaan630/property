@@ -45,10 +45,10 @@
                         <!-- This example requires Tailwind CSS v2.0+ -->
                         <transition
                             enter-active-class="transition ease-out duration-300"
-                            enter-from-class="opacity-0"
+                            enter-class="opacity-0"
                             enter-to-class="opacity-100"
                             leave-active-class="transition ease-in duration-200"
-                            leave-from-class="opacity-100"
+                            leave-class="opacity-100"
                             leave-to-class="opacity-0">
                             <div class="fixed z-10 inset-0 overflow-y-auto " v-show="isOpen">
                                 <div
@@ -71,10 +71,10 @@
                                     <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
                                     <transition
                                         enter-active-class="transition ease-out duration-300"
-                                        enter-from-class="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                                        enter-class="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                                         enter-to-class="opacity-100 translate-y-0 sm:scale-100"
                                         leave-active-class="transition ease-in duration-200"
-                                        leave-from-class="opacity-100 translate-y-0 sm:scale-100"
+                                        leave-class="opacity-100 translate-y-0 sm:scale-100"
                                         leave-to-class="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
                                         <!--
                                           Modal panel, show/hide based on modal state.
@@ -115,7 +115,7 @@
                                                         <div class="col-span-6 sm:col-span-4">
                                                             <jet-label for="name" value="Name"/>
                                                             <jet-input id="name" type="text" v-model="form.title"
-                                                                       :placeholder="$page['props']['name']"
+                                                                       :placeholder="'eg: ' + $page['props']['name']"
                                                                        class="mt-1 block w-full"/>
                                                         </div>
                                                     </div>

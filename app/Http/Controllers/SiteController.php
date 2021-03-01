@@ -55,6 +55,7 @@ class SiteController extends Controller
     {
         return Inertia::render('Sites/Show', [
             'site' => $site,
+            'links' => $site->links,
             'topics' => $site->topics,
             'questions' => $site->topics->each(function ($topic) {
                 return $topic->questions;
@@ -78,6 +79,7 @@ class SiteController extends Controller
     {
         return Inertia::render('Sites/Edit', [
             'site' => $site,
+            'links' => $site->links,
             'topics' => $site->topics,
             'questions' => $site->topics->each(function ($topic) {
                 return $topic->questions;

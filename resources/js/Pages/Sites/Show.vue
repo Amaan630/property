@@ -74,6 +74,38 @@
             </p>
 
 
+            <!--LIST OF LINKS-->
+            <ul v-if="$page['props']['links'].length">
+                <li v-for="(link) in $page['props']['links']"
+                    class="group">
+                    <!--                    <inertia-link :href="route('site.link.show', {-->
+                    <!--                                                    link_uuid: link.uuid-->
+                    <!--                                                })">-->
+                    <form @submit.prevent="openLink.post('/site/open-link')">
+                        <button type="submit" @click="openLink.url = link.url" class="focus:outline-none w-full">
+                            <div class="mb-5 bg-white shadow sm:rounded-lg sm:mb-4">
+                                <div class="px-4 py-5 sm:p-6">
+                                    <div class="sm:flex sm:items-start sm:justify-between">
+                                        <div>
+                                            <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                                {{ link.title }}
+                                            </h3>
+                                        </div>
+                                        <div class="mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center">
+                                            <button type="button"
+                                                    class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm">
+                                                Go
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                    </form>
+                </li>
+            </ul>
+
+
             <!--LIST OF FORMS-->
             <!-- This example requires Tailwind CSS v2.0+ -->
             <ul v-if="$page['props']['topics'].length">
@@ -125,11 +157,20 @@
 
 <script>
 import AppLayout from "@/Layouts/AppLayout";
+import Button from "@/Jetstream/Button";
 
 export default {
     props: ['site'],
     name: "Show",
-    components: {AppLayout}
+    components: {Button, AppLayout},
+
+    data: function () {
+        return {
+            openLink: this.$inertia.form({
+                url: '',
+            }),
+        }
+    }
 }
 </script>
 

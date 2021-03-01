@@ -5,8 +5,11 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreTopicRequest;
 use App\Models\Property\Property;
 use App\Models\Question;
+use App\Models\Site;
+use App\Models\Topic;
 use App\Models\Waitlist;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
 
 class QuestionController extends Controller
@@ -29,7 +32,6 @@ class QuestionController extends Controller
      * Store a newly created resource in storage.
      *
      * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
      */
     public function store(StoreTopicRequest $request)
     {
@@ -38,7 +40,18 @@ class QuestionController extends Controller
             'text' => $request->get('question'),
         ]);
 
-        return Inertia::render('Edit');
+//        $form = Topic::find($request->get('topic_id'));
+
+//        return Inertia::render('Sites/FormEdit', [
+//            'topic' => $form,
+//            'title' => $form->text,
+//            'questions' => $form->questions,
+//        ]);
+
+        return Redirect::route('site.form.edit', [
+            'site' => Site::find($request->get('site_id')),
+            'form' => Topic::find($request->get('topic_id')),
+        ]);
     }
 
 
@@ -75,10 +88,22 @@ class QuestionController extends Controller
      * Remove the specified resource from storage.
      *
      * @param \App\Models\Property\Property $property
-     * @return \Illuminate\Http\Response
      */
-    public function destroy(Site $site)
+    public function destroy(Request $request)
     {
-        $site->delete();
+        Question::find($request->get('question_id'))->delete();
+
+//        return Inertia::render('Sites/FormEdit', [
+//            'form' => Site::find($request->get('topic_id')),
+//            'site' => Site::findByUuid($request->get('site_id')),
+//        ]);
+
+//        $site = $request->get('site_id');
+//        $site = $request->get('site_id');
+
+        return Redirect::route('site.form.edit', [
+            'site' => Site::find($request->get('site_id')),
+            'form' => Topic::find($request->get('topic_id')),
+        ]);
     }
 }

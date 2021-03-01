@@ -7,6 +7,7 @@ use App\Models\Property\Property;
 use App\Models\Question;
 use App\Models\Site;
 use App\Models\Topic;
+use Illuminate\Support\Facades\Redirect;
 use App\Models\Waitlist;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -44,7 +45,6 @@ class TopicController extends Controller
      * Store a newly created resource in storage.
      *
      * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
      */
     public function store(StoreTopicRequest $request)
     {
@@ -59,7 +59,10 @@ class TopicController extends Controller
 //            'text' => $request->get('text'),
 //        ]);
 
-        return Inertia::render('Edit');
+//        return Inertia::render('Edit');
+        return Redirect::route('site.edit', [
+            'site' => Site::find($request->get('site_id')),
+        ]);
     }
 
 
@@ -73,10 +76,13 @@ class TopicController extends Controller
     }
 
 
-    public function edit(Site $site)
+    public function edit(Request $request, Site $site, Topic $form)
     {
-        return Inertia::render('Sites/Edit', [
-            'site' => $site
+        return Inertia::render('Sites/FormEdit', [
+            'topic' => $form,
+            'title' => $form->text,
+            'questions' => $form->questions,
+            'site' => $site,
         ]);
     }
 
@@ -84,12 +90,26 @@ class TopicController extends Controller
      * Update the specified resource in storage.
      *
      * @param \Illuminate\Http\Request $request
-     * @param \App\Models\Site $site
-     * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Site $site)
+    public function update(Request $request)
     {
-        //
+        $question = Question::find($request->get('question_id'));
+
+        $question->text = $request->get('question');
+
+        $question->save();
+
+        $form = Topic::find($request->get('topic_id'));
+
+//        return Inertia::render('Sites/FormEdit', [
+//            'topic' => $form,
+//            'title' => $form->text,
+//            'questions' => $form->questions,
+//        ]);
+        return Redirect::route('site.form.edit', [
+            'site' => Site::find($request->get('site_id')),
+            'form' => Topic::find($request->get('topic_id')),
+        ]);
     }
 
     /**
@@ -100,8 +120,8 @@ class TopicController extends Controller
     {
         Topic::find($request->get('topic_id'))->delete();
 
-        return Inertia::render('Sites/Edit', [
-            'site' => Site::find($request->get('site_id'))
+        return Redirect::route('site.edit', [
+            'site' => Site::find($request->get('site_id')),
         ]);
     }
 }
