@@ -68,10 +68,12 @@ class TopicController extends Controller
 
     public function show(Request $request, Site $site, Topic $form)
     {
-        return Inertia::render('Sites/Form', [
+        // old one was "Form"
+        return Inertia::render('Sites/TypeForm', [
             'topic' => $form,
             'title' => $form->text,
-            'questions' => $form->questions,
+//            'questions' => $form->questions,
+            'questionlist' => $form->questions,
         ]);
     }
 
