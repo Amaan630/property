@@ -34,6 +34,8 @@ Route::resource('site', 'App\Http\Controllers\SiteController');
 Route::get('site/{site}/form/{form}', 'App\Http\Controllers\TopicController@show')->name('site.form.show');
 
 Route::get('site/{site}/edit/{form}', 'App\Http\Controllers\TopicController@edit')->name('site.form.edit');
+
+Route::get('site/{site}/create/{form}', 'App\Http\Controllers\TopicController@create')->name('site.form.create');
 //Route::post('site.form', 'App\Http\Controllers\TopicController@store')->name('site.form.store');
 
 //Route::resource('topic', 'App\Http\Controllers\TopicController');

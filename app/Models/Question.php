@@ -17,7 +17,8 @@ class Question extends Model
 
     protected $fillable = [
         'text',
-        'topic_id'
+        'topic_id',
+        'type'
     ];
 
     public function topic()
